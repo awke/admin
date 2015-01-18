@@ -1,0 +1,169 @@
+<?php
+
+include('functions.inc');
+sqlconn();
+
+//disparray($_SESSION);
+
+if($_SESSION[secarea][authuserdata][SUPERUSER]!=1)
+{
+die("NOT AUTHORISED");
+}
+
+$array=retedittable("itop",0);
+if($array[0]==1)
+{
+//disparray($array[1]);
+$_SESSION[invoice][top]=$array[1];
+}
+
+
+//disparray($_SESSION[invoice]);
+$array=retedittable("ibottom",0);
+if($array[0]==1)
+{
+$dt=$array[1];
+//disparray($dt);
+$dat=$_SESSION[invoice][top][date];
+$sql="SELECT cost from packagedata,packages WHERE packages_idpackages=idpackages AND idpackages='$dt[Package]' AND sdate<='$dat' AND edate>='$dat'";
+$result=gosql($sql,0);
+if(mysql_num_rows($result)<1)
+{
+$dt["Cost"]="ERROR IN PACKAGE DATA";
+$dt["CostEach"]=$dt["Cost"];
+}
+else
+{
+$row=mysql_fetch_assoc($result);
+$dt["CostEach"]=$row[cost];
+$dt["Cost"]=$dt["Quantity"]*$row[cost];
+}
+
+$sql="SELECT description from packages WHERE idpackages='$dt[Package]'";
+$result=gosql($sql);
+$row=mysql_fetch_assoc($result);
+$dt[Package]=$row[description];
+
+
+//$dt["CostEach"];
+//disparray($dt,dtafter);
+$_SESSION[invoice][data][]=$dt;
+
+//DO CONVERSION OF VALUES BACK TO ITEM OR ELSE AS I AM DOING HERE JUST ADD IT SO THAT IT RETURNS THEM FROM FORM by passing both sides the SAME
+
+
+}
+
+//$_SESSION[invoice] contains data on invoice
+//unset($_SESSION[invoice][data]);
+//$_SESSION[invoice][data][]=array("Quantity"=>"1","Package"=>"Domain Registration","Description"=>"TEST.co.uk","Domain"=>"","CostEach"=>"12.00","Cost"=>"12.00");
+//$_SESSION[invoice][data][]=array("Quantity"=>"1","Package"=>"Domain Setup","Description"=>"","Domain"=>"TEST.co.uk","CostEach"=>"2.00","Cost"=>"2.00");
+//$_SESSION[invoice][data][]=array("Quantity"=>"6","Package"=>"Web Hosting","Description"=>"Per Month","Domain"=>"TEST.co.uk","CostEach"=>"5.00","Cost"=>"30.00");
+//$_SESSION[invoice][data][]=array("Quantity"=>"6","Package"=>"Web Hosting","Description"=>"Per Year","Domain"=>"TEST.com","CostEach"=>"6.00","Cost"=>"36.00");
+
+
+//unset($_SESSION[invoice][top]);
+if(!isset($_SESSION[invoice][top]))
+{
+$date=dispdate2(getcurdate());
+
+$_SESSION[invoice][top]=array("date"=>"$date","customer_reference_number"=>"","customer_number"=>"","Comment"=>"");
+}
+
+
+
+
+
+
+$sql="SELECT idcustomers,fname,lname from customers ORDER BY lname";
+
+$result=gosql($sql,0);
+
+while ($row=mysql_fetch_assoc($result) )
+{
+$lookup[$row[idcustomers]]="$row[fname] $row[lname]";
+}
+$desc=array("Date","Customer Reference Number","Customer","Comment");
+
+$function=array(array(0),array(0),array(2,$lookup));
+
+
+unset($lookup);
+
+
+
+print <<<END
+
+<h2>One Off Invoice Creator</h2>
+<form method="post">
+END;
+
+
+edittable("itop",0,"usual",$_SESSION[invoice][top],$desc,$function);
+
+print "<br>";
+
+if(isset($_SESSION[invoice][data]))
+{
+$lco=0;
+$total=0;
+foreach($_SESSION[invoice][data] as $key => $value)
+{
+$uniq[$lco]=$lco;
+$_SESSION[invoices][ilid][$lco]=$key;
+$lco++;
+$total=$total+$value[Cost];
+
+}
+
+
+$keys=array("Quantity","Package","Description","Domain","Cost Each","Cost");
+
+$function=array(array("Delete","<a href=\"idell.php?ID=%UNIQ%\">Delete</a>"));
+
+$rt=disptable($keys,$_SESSION[invoice][data],$uniq,$function,"usual",1);
+print $rt;
+print "TOTAL:£$total<br>";
+}
+
+print "<br>";
+
+$sql="SELECT D_ID,domainn from domains";
+
+$result=gosql($sql,0);
+
+while ($row=mysql_fetch_assoc($result) )
+{
+$lookup[$row[domainn]]="$row[domainn]";
+}
+$lookup[""]="";
+
+$sql="SELECT idpackages,description from packages";
+
+$result=gosql($sql,0);
+
+while ($row=mysql_fetch_assoc($result) )
+{
+$lookup2[$row[idpackages]]="$row[description]";
+}
+
+
+
+
+
+$desc=array("Quantity","Package","Description","Domain");
+
+$function=array(array(0),array(2,$lookup2),array(0),array(2,$lookup),array(1));
+
+
+$blank=array("Quantity"=>"","Package"=>"","Description"=>"","Domain"=>"","CostEach"=>"");
+
+
+
+edittable("ibottom",0,"usual",$blank,$desc,$function);
+
+print "<a href=\"idisp\">Next--></a>";
+
+//disparray($lookup2,lk2);
+//disparray($_SESSION[invoice]);
+bottom();

@@ -1,0 +1,18 @@
+<?php
+$HEADER=0;
+include('functions.inc');
+sqlconn();
+
+//disparray($_SESSION,session);
+//disparray($_POST,POST);
+$customerid=$_SESSION[secdata][customers][pindex.php][pid][$_GET[id]];
+
+
+$sql="DELETE FROM packages WHERE idpackagess='$customerid'";
+gosql($sql,1);
+header("Location: pindex.php");
+
+
+
+
+

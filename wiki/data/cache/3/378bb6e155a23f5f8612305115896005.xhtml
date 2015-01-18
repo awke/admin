@@ -1,0 +1,118 @@
+
+<h1 class="sectionedit1"><a name="minutes_of_meeting" id="minutes_of_meeting">**Minutes of Meeting**</a></h1>
+<div class="level1">
+
+<p>
+Meeting took place on Sunday 17th January 2010 @ 19.36
+</p>
+
+</div>
+<!-- EDIT1 SECTION "**Minutes of Meeting**" [1-94] -->
+<h2 class="sectionedit2"><a name="new_servers" id="new_servers">1. NEW SERVERS</a></h2>
+<div class="level2">
+
+<p>
+We have three new servers, plus backup space. These will replace the Bitfolk server in due course. Backup server isn&#039;t currently working correctly, there are issues relating to the configuaration.
+</p>
+
+<p>
+a) THETA SERVER: the replacement is nearly ready, just needs some final checks and tests to make sure that nothing has been missed. Data has been synced on and off.
+</p>
+<ul>
+<li class="level1"><div class="li"> Ben tried to remove a language from the server after which a discussion on which packages existed on the server. Nothing was touched!</div>
+</li>
+<li class="level1"><div class="li"> Some accounts have been removed from the new system, these are ones which have become deactiveated or not paid etc.</div>
+</li>
+<li class="level1"><div class="li"> Ben&#039;s domain has been changed over.</div>
+</li>
+<li class="level1"><div class="li"> The file systems have been changed over to EXT3. As a result the commands for resizing diskspace have changed. </div>
+</li>
+<li class="level1"><div class="li"> There is still quite a lot of diskspace available from Jump. 17Gb unallocated and 37GB in a spare partitican.</div>
+</li>
+<li class="level1"><div class="li"> Bandwidth changes from Gb used, to 95% peak.</div>
+</li>
+<li class="level1"><div class="li"> £30 for 20Gb per year of additional space with Jump should be need it.</div>
+</li>
+<li class="level1"><div class="li"> Move to take place either Thursday 21st Jan. New <acronym title="Domain Name System">DNS</acronym> settings are ns.awke.co.uk, ns1.awke.co.uk, ns2.awke.co.uk - customers who manage their own <acronym title="Domain Name System">DNS</acronym> settings will need to update them. Advertise one of the backup MX in advance. </div>
+</li>
+<li class="level1"><div class="li"> <em><strong>ACTION:</strong></em> Peter to send an email to customers <acronym title="As soon as possible">ASAP</acronym> to let customers know about the downtime and changes. Estimated downtime to be no longer than 2 hours.</div>
+</li>
+<li class="level1"><div class="li"> We will need to check that the server is going to be working in terms of sending customer emails etc.</div>
+</li>
+<li class="level1"><div class="li"> Debian 5.0.3 in 64bit is currently what is installed on the server.</div>
+</li>
+</ul>
+
+<p>
+b) ETA SERVER: Hosted with XenVZ in the UK, maybe in Maidenhead data centre. They are very cheap. Nagios server is installed on this server. It is a high <acronym title="specification">spec</acronym> machine. It is also running it&#039;s own Apache server, so that if there was a requirement we could temporarily run websites for us, if required. It has a panel interface available. 
+</p>
+
+<p>
+c) ZETA SERVER: Hosted in the US. Now owned by Comfort Host. No panel interface available. LiteHttp Demon, Config Files, Spam Assasin, and a few other bits. This is for backup MMX. Any email sent to ALL@AWKE.CO.UK will expand out to the system. Add the option to do the same with admin@awke.co.uk.
+</p>
+
+</div>
+<!-- EDIT2 SECTION "1. NEW SERVERS" [95-2352] -->
+<h2 class="sectionedit3"><a name="request_tracker" id="request_tracker">2) REQUEST TRACKER:</a></h2>
+<div class="level2">
+
+<p>
+ Discussion around the configuration and usage of the package. All agreed that it was a really useful system and made a difference.
+<strong><em>ACTION</em></strong> Simon: it would be good to automatically create tickets for diskspace, domain renewals etc to help with tracking.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "2) REQUEST TRACKER:" [2353-2648] -->
+<h2 class="sectionedit4"><a name="customer_packages" id="customer_packages">3) CUSTOMER PACKAGES</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Secure Hosting: We will continue as is.</div>
+</li>
+<li class="level1"><div class="li"> Email only: To get same disk space as below.</div>
+</li>
+<li class="level1"><div class="li"> Standard Package: Currently have a number of medium packages which is roughly double that of standard in terms of disk space. Unlimited Bandwidth *Fair user policy on the page which sets out that it should not exceed our “UNLIMITED BANDWIDTH - nominally 5GB per month, but as long as between customers we do not exceed arranged service traffic we will not pass the charge”. “HARD DISK SPACE: Upto 1GB is available per customer allocated in 100Mb chunks.” Decision around the space is: We will allocate the space manually but the email will now go to request tracker instead, within that email it would include a <acronym title="Uniform Resource Locator">URL</acronym> to increase the space. Logic is that it is a one time <acronym title="Uniform Resource Locator">URL</acronym>. </div>
+</li>
+</ul>
+
+<p>
+<strong><em>ACTION:</em></strong> Email to go out about package increase and invoices.
+</p>
+
+<p>
+<strong><em>ACTION:</em></strong> Adjust packages on the admin interface for invoices - by 30th January.
+</p>
+
+</div>
+<!-- EDIT4 SECTION "3) CUSTOMER PACKAGES" [2649-3613] -->
+<h2 class="sectionedit5"><a name="domains" id="domains">4) DOMAINS</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Flix is sixty domain needs to be deleted.</div>
+</li>
+<li class="level1"><div class="li"> <em><strong>ACTION</strong></em>: When deactivated by web interface change the package to deactivated on the domain automatically.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "4) DOMAINS" [3614-3800] -->
+<h2 class="sectionedit6"><a name="legal_status" id="legal_status">5) LEGAL STATUS</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Discussion over what we should do with the legal status of AWKE.</div>
+</li>
+<li class="level1"><div class="li"> Operating Costs (approx) = £300 Jump, £50 Eta, £50 Zeta, £50 Backup = £450</div>
+</li>
+<li class="level1"><div class="li"> Current Amount in the account is £810.10</div>
+</li>
+<li class="level1"><div class="li"> Approximately 20 customers.</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.businesslink.gov.uk/bdotg/action/detail?r.s=m&amp;r.l1=1073858805&amp;r.lc=en&amp;r.l3=1073865730&amp;r.l2=1073859131&amp;r.i=1073789616&amp;type=RESOURCES&amp;itemId=1073789611&amp;r.t=RESOURCES" class="urlextern" title="http://www.businesslink.gov.uk/bdotg/action/detail?r.s=m&amp;r.l1=1073858805&amp;r.lc=en&amp;r.l3=1073865730&amp;r.l2=1073859131&amp;r.i=1073789616&amp;type=RESOURCES&amp;itemId=1073789611&amp;r.t=RESOURCES"  rel="nofollow">Limited liability partnership (LLP)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.clickdocs.co.uk/limited-liability-partnership.htm" class="urlextern" title="http://www.clickdocs.co.uk/limited-liability-partnership.htm"  rel="nofollow">Example Paperwork</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.netlawman.co.uk/info/limited-liability-partnership.php" class="urlextern" title="http://www.netlawman.co.uk/info/limited-liability-partnership.php"  rel="nofollow">More useful information</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "5) LEGAL STATUS" [3801-] -->

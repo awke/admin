@@ -1,0 +1,58 @@
+====== **Minutes of Meeting** ======
+
+Meeting took place on Sunday 17th January 2010 @ 19.36
+
+===== 1. NEW SERVERS =====
+
+We have three new servers, plus backup space. These will replace the Bitfolk server in due course. Backup server isn't currently working correctly, there are issues relating to the configuaration.
+
+a) THETA SERVER: the replacement is nearly ready, just needs some final checks and tests to make sure that nothing has been missed. Data has been synced on and off.
+  * Ben tried to remove a language from the server after which a discussion on which packages existed on the server. Nothing was touched!
+  * Some accounts have been removed from the new system, these are ones which have become deactiveated or not paid etc.
+  * Ben's domain has been changed over.
+  * The file systems have been changed over to EXT3. As a result the commands for resizing diskspace have changed. 
+  * There is still quite a lot of diskspace available from Jump. 17Gb unallocated and 37GB in a spare partitican.
+  * Bandwidth changes from Gb used, to 95% peak.
+  * £30 for 20Gb per year of additional space with Jump should be need it.
+  * Move to take place either Thursday 21st Jan. New DNS settings are ns.awke.co.uk, ns1.awke.co.uk, ns2.awke.co.uk - customers who manage their own DNS settings will need to update them. Advertise one of the backup MX in advance. 
+  * //**ACTION:**// Peter to send an email to customers ASAP to let customers know about the downtime and changes. Estimated downtime to be no longer than 2 hours.
+  * We will need to check that the server is going to be working in terms of sending customer emails etc.
+  * Debian 5.0.3 in 64bit is currently what is installed on the server.
+
+b) ETA SERVER: Hosted with XenVZ in the UK, maybe in Maidenhead data centre. They are very cheap. Nagios server is installed on this server. It is a high spec machine. It is also running it's own Apache server, so that if there was a requirement we could temporarily run websites for us, if required. It has a panel interface available. 
+
+c) ZETA SERVER: Hosted in the US. Now owned by Comfort Host. No panel interface available. LiteHttp Demon, Config Files, Spam Assasin, and a few other bits. This is for backup MMX. Any email sent to ALL@AWKE.CO.UK will expand out to the system. Add the option to do the same with admin@awke.co.uk.
+
+
+===== 2) REQUEST TRACKER: =====
+ Discussion around the configuration and usage of the package. All agreed that it was a really useful system and made a difference.
+**//ACTION//** Simon: it would be good to automatically create tickets for diskspace, domain renewals etc to help with tracking.
+
+
+
+===== 3) CUSTOMER PACKAGES =====
+  * Secure Hosting: We will continue as is.
+  * Email only: To get same disk space as below.
+  * Standard Package: Currently have a number of medium packages which is roughly double that of standard in terms of disk space. Unlimited Bandwidth *Fair user policy on the page which sets out that it should not exceed our "UNLIMITED BANDWIDTH - nominally 5GB per month, but as long as between customers we do not exceed arranged service traffic we will not pass the charge". "HARD DISK SPACE: Upto 1GB is available per customer allocated in 100Mb chunks." Decision around the space is: We will allocate the space manually but the email will now go to request tracker instead, within that email it would include a URL to increase the space. Logic is that it is a one time URL. 
+**//ACTION://** Email to go out about package increase and invoices.
+
+**//ACTION://** Adjust packages on the admin interface for invoices - by 30th January.
+
+
+===== 4) DOMAINS =====
+  * Flix is sixty domain needs to be deleted.
+  * //**ACTION**//: When deactivated by web interface change the package to deactivated on the domain automatically.
+
+===== 5) LEGAL STATUS =====
+
+  * Discussion over what we should do with the legal status of AWKE.
+  * Operating Costs (approx) = £300 Jump, £50 Eta, £50 Zeta, £50 Backup = £450
+  * Current Amount in the account is £810.10
+  * Approximately 20 customers.
+  * [[http://www.businesslink.gov.uk/bdotg/action/detail?r.s=m&r.l1=1073858805&r.lc=en&r.l3=1073865730&r.l2=1073859131&r.i=1073789616&type=RESOURCES&itemId=1073789611&r.t=RESOURCES|Limited liability partnership (LLP)]]
+  * [[http://www.clickdocs.co.uk/limited-liability-partnership.htm|Example Paperwork]]
+  * [[http://www.netlawman.co.uk/info/limited-liability-partnership.php|More useful information]]
+
+
+
+

@@ -1,0 +1,19 @@
+====== Out of Office Fudge ======
+
+**This is a fudge work around which can only be setup by us at the moment. If any customer wants it then they need to request a ticket to turn it on and off **
+
+To do this fudge
+
+goto
+
+/Supported/mail/
+
+edit nick--nickbearman.me.uk.vacation.msg.txt with the message text
+
+edit filters/nick@nickbearman.me.uk
+
+and commend out 1 hash at the front on each line to enable it and add 1 hash to each line at the front to disable
+
+Editing appropriate bits it can be used for other users.
+
+Simon

@@ -1,0 +1,109 @@
+====== List of Xens ======
+
+===== CURRENT =====
+
+
+==== ETASERVER ====
+
+=== XenVZ ===
+Giga VPS: 20gb space, 768mb RAM, 1536mb Swap Xen, 150gb data transfer @
+£23.94 GBP per 6 month(s) 2 64bit cpus
+
+THIS IS A RATHER AMAZING OFFER.  This machine is theoretically capable
+of replacing the bitfolk vps for about 10% of the bill! but doesnt
+include backup MX & DNS etc.  Very slightly less diskspace than we were
+actively using on bitfolk.
+
+£47.88 a year
+
+==== THETASERVER ====
+
+=== JUMP ===
+
+
+1Gb RAM, 80GB HDD on RAID1 via enterprise san unit, 1Mbps 95percentile
+bandwidth [around 360GB if I remember correctly] available on a 1Gb to
+real host, with 2 64bit cpus . 250+VAT a year
+
+£293.75 a year
+
+
+==== IOTASERVER =====
+
+=== Advantage Networks ===
+
+This is a new server to primarily function as backup storage space, but also take over aand replace the few functions that zetaserver serves.
+
+** This is Centos 5.6 ** If necessarly a chroot of debian can be installed but Id like to avoid this if possible.
+
+512Mb RAM, 128Mb Swap, 199Gb HDD (~182Gb Actual), 2000GB Bandwidth, 2 64bit cpus, 1 IP Address.  Cost $60 a year ~£40
+
+
+$60 a year ~ £40
+
+
+===== Control Panel Details =====
+
+[[login_details_to_admin_panels]]
+
+
+===== Previous =====
+
+==== ZETASERVER ====
+
+=== Virtually Dedicated/ComfortHost ===
+
+Thi machine was sold to comforthost, around this time we started having issues with it and it eventually died, they ended up offering us an openvz server at similar cost and spec but it was decided to keep with xen servers.
+
+VX384, 384MB RAM, 768MB swap, 0.48ghz, QuadCore, 24GB HDD, 300GB
+bandwidth  cost $21.92 for 3 months about £13.64 at min, futher
+discounts can be had by changing to yearly payment. 64bit
+
+£54.56 at current exchange rate a year
+
+==== ZETASERVER ====
+
+=== VirtUK seems to be GigaTux ===
+
+This replaced the old zetaserver that was with virtuallydedicated which seemed to sell it to comforthost and then the machine died and they offered to replace it with an openvz one.
+
+512Mb RAM, 1024Mb Swap, 15GB HDD, 300GB bandwidth, 4 64bit cpus, 2 IP address. Cost £7 a month 
+
+
+£84.00 a year
+
+==== DELTASERVER ====
+
+=== BitFolk ===
+
+840Mb RAM, 45G of HDD [but only have 25G allocated to server and about
+15G allocated to backups], 360GB Bandwidth, 440 a year or 44 a month. 1
+32 bit cpu
+
+£440 a year
+
+==== EPSILONSERVER ====
+
+=== BitFolk ===
+
+Old US Server 184MB RAM
+
+~£80
+
+==== GAMMASERVER ====
+
+=== JUMP ===
+
+Old real server this was the Dom0
+
+==== ALPHASERVER ====
+
+=== JUMP/AWKE ===
+
+This was a xen domU that was the primary server
+
+==== BETASERVER ====
+
+=== JUMP/AWKE ===
+
+This was a xen domU that basically provided backup DNS & MX

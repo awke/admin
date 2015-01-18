@@ -1,0 +1,71 @@
+====== AWKE Meeting – 24/02/08 ======
+
+
+**Opened at 15:35 – Closed at 18:15**
+
+===== 1. Minutes and Actions from 2007 Meeting =====
+
+  - Minutes from previous meeting were reviewed and the following issues arose.
+  - Ben to add his details to the customer system
+  - Decision taken not to investigate a savings account because of the high cash turn over and because we owe money back to us.
+  - Reminder that all need to send emails to all if they are left in the Admin email account for too long.
+  - Ben to check that the ACTIONS mailing list is still working
+  - Ben to look at the NAGIOS monitoring from Bitfolk.
+
+===== 2. Review of the Year, =====
+
+
+==== 1. Accounts ====
+
+
+
+ 
+  - The accounts were looked at and reviewed and a discussion had.
+  - Simon to check float on his accounts.
+  - Peter: To transfer £250 initial floats back to our individual accounts.
+  - All: Review again the amount in the accounts in the summer to decide whether any further float funds can be returned.
+
+
+==== 2.	Customers: ====
+ 
+  - It was considered that we had a good number of customers, although there ad been a large number of new ones via Redk, which had slowed recently. We have only lost one customer over the year which was mainly due t them not wanting the site anymore.
+  - Peter to think about writing some idiot cards on how to do some of the basic functions like ftp.
+
+==== 3.	Hardware: ====
+ 
+  - AWKE stopped using any hardware during the course of the year. It was decided that we would keep hold of the server for the time being as it's resell value was fairly low, but the cost to replace would be much higher. This would be reviewed in the future.
+
+
+==== 4.	Software:  ====
+ 
+  - Nothing to really say, other than Ben to review package versions that are being run.
+
+
+===== 3.	Plans for next year: =====
+
+
+==== 1.	Prices/Packages: ====
+  - Reviewed the prices and packages and decided that they should remain as they are except that:
+  * Disc Space – review as necessary
+  * Increase bandwidth to 3GB.
+  * Review all this again in 12 months.
+
+==== 2.	Busienss Status of AWKE: ====
+ 
+Discussion took place about the status and whether it should be changed. It was decided that it would remain as it was for now, but we would review the 'status' of AWKE and whether it should be a company etc in 12 months. .
+==== 3.	Free Accounts: ====
+It was agreed that free accounts were ok, but that a proper policy should exist to help with. //ACTION//Ben to write the proposal, and rest to agree the wording.
+===== AOB =====
+
+
+  - 	Email clean up of admin account. //ACTION:// Ben: Log file emails, remove all but the last 3 months – review in future. 	Check to see whether CRON job to rename.
+  - //Peter//: Double check Ben's domain invoice
+  - US Server: Ben been doinng some work on email.
+  - BACKUP DNS: Ben and Simon have a plan. Action on Simon.
+  - BACKUPS: Configs and database is currently backed up every 4 hours, once a day, once a week, once a month. Mailing list & AWKE domain (except the mail dir) – request once an evening at off peak – Simon to talk to Andy. Move the databases to sync with the mailing lists everyday only. Peter & Simon to investigate rycny backups via ftp to users own systems.
+  - Paperwork: All to review the current AWKE Paperwork in terms of Terms & Conditions and AUP.
+  - Holidays: Peter & Simon to let Ben know when on leave.
+  - Purchase of software: It was agreed that if necessary we would purchase software, but it would be dependent on cost and use etc.
+  - Expenses policy – discussed.
+  - Accounting/Invoicing: Discussion.
+  - Date of next meeting will be February 2009, tbc.

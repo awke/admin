@@ -1,0 +1,39 @@
+List of Remote Backup Services
+
+===== SplitServ =====
+
+50GB 
+$3.95 a month 
+$47.40 a year
+
+supports xattrs
+and self compiled rsync 3.0.7
+
+Looks good and supports crontab support etc for rsnapshot.
+
+SSH IP: 207.210.108.130
+
+SSH User: satack (trying to get it changed)
+
+usual backup admin password
+ 
+
+===== XSBackup =====
+
+60GB
+$75 a year
+includes reseller.
+
+You can give extra accounts out from it, but doesnt seem to be supporting rsnapshot even though asked. and cannot save permissions as it doesnt support xattrs as its disk space is nfs
+
+Node : core.xsbackup.com
+
+SSH port : 6457
+
+ssh user is awke
+
+usual backup admin password
+
+===== Control Panel Details =====
+
+[[login_details_to_admin_panels]]

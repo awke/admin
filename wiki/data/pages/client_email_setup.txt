@@ -1,0 +1,5 @@
+====== Client Email Setup ======
+
+I had an issue while helping Michael Flemming set his email up.  When using the outlook test it failed.
+
+It turns out when you send the mail from inside the application its fine, the test fails though

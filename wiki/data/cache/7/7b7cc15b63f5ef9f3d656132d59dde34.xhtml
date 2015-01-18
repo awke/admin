@@ -1,0 +1,41 @@
+
+<p>
+All,
+</p>
+
+<p>
+Just had Sue Groom call me with a problem that here mail client got
+disconnected when trying to get new mail (<acronym title="Post Office Protocol 3">POP3</acronym>).  I had a look in the log
+file and it says
+</p>
+
+<p>
+dovecot: pop3(sue@art2murals.com): Error: Message ordering changed
+unexpectedly (msg #1: storage seq 666 → 1)
+dovecot: pop3(sue@art2murals.com): Fatal: Can&#039;t finish <acronym title="Post Office Protocol 3">POP3</acronym> UIDL command
+</p>
+
+<p>
+the quick and dirty fix is to delete the dovecot-uidlist file from every
+subfolder including index but it will force the client to redownload the
+mailbox
+</p>
+
+<p>
+I think in sues case its because the imap &amp; pop3 uid lists are so
+different in date when merged it wasnt happy.  (courier used separate
+lists for impa &amp;pop3 but dovecot seems to use a combined).
+</p>
+
+<p>
+The email is now in /Data/email/&lt;DOMAIN&gt;/&lt;ACCOUNT&gt;
+</p>
+
+<p>
+cd to this location and type find . -iname dovecot-uidlist you can then
+delete them.
+</p>
+
+<p>
+Simon
+</p>

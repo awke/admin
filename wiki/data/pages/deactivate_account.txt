@@ -1,0 +1,10 @@
+====== Deactivate Account ======
+
+
+  * To deactivate account login to phpmyadmin http://secure.awke.co.uk/phpmyadmin/
+  * (root), 
+  * goto adminInfo on left side and then choose domains, 
+  * click browse and then enter 999 in the box next to Show: 
+  * and 0 in the next box and click Show:  
+  * FIND the domain and click Edit set deactivated to 1.  
+  * This deactivates account and can be verified by logging into admin site and seeing domain at end of list with deactivated.

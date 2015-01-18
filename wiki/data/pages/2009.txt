@@ -1,0 +1,75 @@
+2009 AWKE AGM:
+
+Agenda Items:
+  - Look at actions from last year
+  - Review of Previous Year
+  - A look at accounts (financial)
+  - Review at how the new invoice system worked
+  - Look at the Terms & Conditions/Acceptable User Policy, make sure that the change to accounting year is included (please read in advance)
+  - Look at the number of users
+  - Review the jump vps ?
+  - Upgrading packages on server
+
+
+
+Minutes:
+
+Meeting Opeed at 1901.
+
+1. Actions from 2008.
+  * Peter still needs to write the basic idiot cards
+  * Ben continues to review the packages on the system.
+  * Prices/Packages to be reviewed later
+  * Log files CRON jobs, Ben dones this.
+  * Ben's invoice was checked
+  * US server no longer available
+  * Backup DNS has been done, but there are on going issue with UKHOSTS.
+  * Paywork review will happen later this meeting
+  * Backups: carry this over for further investigation. Ben to lead this piece of work.
+
+2. Review of Previous Year
+  * The biggest thing has been the changing of the way that customers are charged and making the billing year from February.
+  * There are more scrupts in use which has allowed for the automation of domain reminders and invoicing. There reminders for those who haven't paid their invoices which are being sent out.
+  * We have lost the US machine due to Bitfolk closing their US server.
+  * REDK decided using us for their site and encouraging their customers to use AWKE, as a result we have lost several accounts as a result.
+  * We now have our own SSL certifcate for 62 months.
+
+3.   Financial Accounts
+  * The accounts as of today are £642.13 minus the AGM expenses. This means that we have enough money to cover the hosting bill in September.
+  * There are £800+ money outstanding, and some issues appear to exist from customers which will require SIMON/PETER to sort out.
+  * Update: during the course of the meeting several payments were received!
+
+
+
+4. Review of how the new invoice system worked
+  * On the whole the new invoice system was a success and has saved Peter a considerable amount of work.
+  * It should provide far accurate results in future (there were only three mistakes as opposed to the usual mistakes made by a manual process).
+  * Also doing the domain renewals which is providing more accurate renewals and sends the information to UKHOSTS.
+  * Simon has requested that when there is some spare money that this should be used to help recompense him for the time taken to write the new system. It was agreed by Ben and Peter that a sum of £100.
+
+
+
+5. Look at number of Users:
+  * We are losing them (see above)
+  * Referral scheme was discussed. ACTION: Peter to further work on.
+
+
+6. Review the Jump VPS
+  * This was looked and a discussion took place. The final decision is that Ben is going to talk to James (Jump) about this. There would be work to move the data about the servers and setup.
+
+
+7. Upgrading packages on server:
+  * 13 packagess need upgrading on the server. Need to move from old stable to new stable. Question whether it is necessary if we are going to move boxes. Discussion over what they are and what the risk is. The final decision was to only upgrade the keyring at the moment and to review packages as they go forward. Action Ben - to read documentation before doing the upgrades.
+
+
+8. Terms and Conditions/Acceptable User Policy
+  * There wasn't time to go through these so they were be worked on remotely.
+
+9 AOB
+  * PRICES & PACKAGES: Get rid of secure web hosting. Free unlimited subdomains. 
+  * PASSWORDS: It was decided that for security passwords should be changed: Kegyalgog4. Individual accounts will also be changed.
+
+ 
+
+
+

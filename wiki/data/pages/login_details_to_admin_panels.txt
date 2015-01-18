@@ -1,0 +1,102 @@
+====== VPSs ======
+===== Thetaserver =====
+
+Jump
+
+ssh interface
+
+ssh to awke@awketheta.vpsconsole.jump.net.uk
+
+username awketheta
+
+port 22
+
+usual backup admin password
+
+This allows shutdown, startup of vps, console, and using uptime can get the dom0 load average.
+
+often left in top mode, so you can see total of data transferred & disk ops since boot
+
+Help lists commands
+Console - tells you whats going on
+shutdown - shuts the server down
+shutdown force - only if the above doesn't work
+boot - starts server again, typing console again will let you see it (hopefully) rebooting
+if shutdown force doesn't work then contact James.
+
+===== Etaserver =====
+
+xenvz
+
+web interface
+
+goto https://clients.openitc.co.uk/account.php?act=vps
+
+email is admin email address
+
+PASSWORD IS xl0LbsRcl3  and not usual backup admin password  NOT it appears its usual backup password
+
+This allows shutdown, startup, forced shutdown, bandwidth usage, recovery console.
+
+It shows current monthly bw used as well as estimated for month
+
+===== Zetaserver =====
+
+
+virtuk
+
+web interface
+
+goto https://dtc.emohawk.gigatux.com/
+
+username is awkezeta
+
+password bjp95rsfn5fd
+
+This allows shutdown, startup, bandwidth usage and disk usage, recovery console
+
+===== IOTASERVER =====
+
+
+advantage networks
+
+goto https://cbp.speedingbits.com/billing/
+
+login is admin@awke.co.uk
+old root passwd
+
+This allows you to raise a support request ticket if needed, we are severely limited in how many a month should be 35 but some suggestions its more like 1.
+
+Not very good in this respect
+
+====== Remote Backups ======
+
+
+===== xsbackup =====
+
+web interface
+
+goto http://backups.awke.co.uk/
+
+username is awke
+
+usual backup admin password
+
+it lets you create users. it will show diskspace but the system is not actually limited.
+
+===== splitserver =====
+
+
+web interface
+
+goto http://backup.awke.co.uk:2082/
+
+username is satack  (Im trying to get this changed)
+
+usual backup admin password
+
+lets you set ftp accounts to access the areas and you can create limited ftp user access to areas.
+
+also allows setup of cron jobs and its this that allows us to use rsnapshot.
+
+display disk usage etc.

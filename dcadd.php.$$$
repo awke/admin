@@ -1,0 +1,61 @@
+<?php
+
+include('functions.inc');
+sqlconn();
+
+//disparray($_SESSION,session);
+//disparray($_POST,POST);
+$customerid=$_SESSION[secdata][customers][index.php][cid][$_GET[id]];
+if($customerid=="")
+{
+$customerid=$_SESSION[secdata][customers][edit.php][custid];
+}//print $customerid;
+
+
+
+
+
+
+print <<<END
+
+<h2>Adding Customer Infomation</h2>
+<form method="post" action="dcupdatea.php">
+
+END;
+
+
+//$sql="SELECT * from customers WHERE idcustomers='$customerid'";
+
+
+//generate lookup table
+$sql="SELECT D_ID,domainn from domains";
+
+$result=gosql($sql,0);
+
+while ($row=mysql_fetch_assoc($result) )
+{
+$lookup[$row[D_ID]]=$row[domainn];
+}
+
+$row=array("","","customers_idcustomers"=>"","billed"=>"");
+$desc=array("","","Domain","Billed");
+$function=array(array(1),array(1),array(2,$lookup),array(0));
+//disparray($function);
+edittable("domcl",0,"usual",$row,$desc,$function);
+
+
+$_SESSION[secdata][customers][edit.php][custid]=$customerid;
+unset($_SESSION[secdata][customers][index.php][cid]);
+
+
+//phpinfo();
+
+
+
+bottom();
+
+//disparray($_SESSION);
+
+
+
+

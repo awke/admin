@@ -1,0 +1,15 @@
+====== Extending User Disk Space ======
+
+To extend a user's disk space:
+
+  - Login to the server
+  - Run this command (what are they?)
+  - lvextend -L+100M /dev/storage/madcrnp (where the last part is the domain username and the number is the amount please use amounts of 100M)
+NEW:
+  - resize2fs /dev/storage/madcrnp (where last part is the domain username)
+OLD:
+  - resize_reiserfs /dev/storage/madcrnp (where the last part is the domain username)
+
+
+
+

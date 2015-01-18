@@ -1,0 +1,119 @@
+
+<p>
+&lt;<acronym title="Uniform Resource Locator">URL</acronym>: <a href="https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57" class="urlextern" title="https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57"  rel="nofollow">https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57</a> &gt;
+</p>
+
+<p>
+On 09/07/2010 16:07, Ryan Ramstad via RT wrote:
+</p>
+<blockquote><div class="no">
+ &gt; <br/>
+ &gt; Fri Jul 09 16:07:25 2010: Request 57 was acted upon.<br/>
+ &gt;  Transaction: Ticket created by phaedrus_25_@hotmail.com<br/>
+ &gt;        Queue: General<br/>
+ &gt;      Subject: Knighthawk Deliveries<br/>
+ &gt;        Owner: Nobody<br/>
+ &gt;   Requestors: phaedrus_25_@hotmail.com<br/>
+ &gt;       Status: new<br/>
+ &gt;  Ticket &lt;<acronym title="Uniform Resource Locator">URL</acronym>: <a href="https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57" class="urlextern" title="https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57"  rel="nofollow">https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57</a> &gt;<br/>
+ &gt; <br/>
+ &gt; <br/>
+ &gt; <br/>
+ &gt; Good day, we&#039;ve been trying to re-direct our <a href="http://www.knighthawkdelivery.com" class="urlextern" title="http://www.knighthawkdelivery.com"  rel="nofollow">www.knighthawkdelivery.com</a> to our new site <a href="http://knighthawkdelivery.myshopify.com/" class="urlextern" title="http://knighthawkdelivery.myshopify.com/"  rel="nofollow">http://knighthawkdelivery.myshopify.com/</a> but we&#039;re having trouble doing so. We&#039;ve added the new site to the <acronym title="Domain Name System">DNS</acronym> but can not find the domain re-direct. Any help would be great. Thank you!<br/>
+ &gt; <br/>
+ &gt; Sincerely,<br/>
+ &gt;                  Ryan Ramstad<br/>
+ &gt; (Director)<br/>
+ &gt; <a href="http://www.knighthawkdelivery.com" class="urlextern" title="http://www.knighthawkdelivery.com"  rel="nofollow">www.knighthawkdelivery.com</a><br/>
+ &gt; 07821872277<br/>
+ &gt; <br/>
+ &gt;  		 	   		  <br/>
+ &gt; <em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em><em class="u"></em>_<br/>
+ &gt; <a href="http://clk.atdmt.com/UKM/go/195013117/direct/01/" class="urlextern" title="http://clk.atdmt.com/UKM/go/195013117/direct/01/"  rel="nofollow">http://clk.atdmt.com/UKM/go/195013117/direct/01/</a><br/>
+ &gt; </div></blockquote>
+
+<p>
+Instructions from <a href="http://wiki.shopify.com/DNS" class="urlextern" title="http://wiki.shopify.com/DNS"  rel="nofollow">http://wiki.shopify.com/DNS</a>
+</p>
+
+<p>
+OK I have done this for knighthawkdelivery.com (and added the steps
+below so you can do them for yourself on the other domains)
+</p>
+
+<p>
+YOU WILL NEED TO LOOK AT THE LAST STEP ( Enter the domain name(s) you&#039;ll
+be using in Shopify ) as I cannot do this for you
+</p>
+
+<p>
+Goto awke admin site <a href="https://secure.awke.co.uk/admin" class="urlextern" title="https://secure.awke.co.uk/admin"  rel="nofollow">https://secure.awke.co.uk/admin</a>
+</p>
+
+<p>
+login
+</p>
+
+<p>
+click the domain
+</p>
+
+<p>
+then on the list of options click edit next to “<acronym title="Domain Name System">DNS</acronym> Record Management”
+</p>
+
+<p>
+then depending upon which entry to change ( I would recommend www )
+click edit
+</p>
+
+<p>
+change RR [type]  from A to CNAME
+change content from 212.13.216.213 to knighthawkdelivery.myshopify.com
+click submit
+</p>
+
+<p>
+This will change the info on our server within a couple of minutes (It
+could take upto 48hrs for the rest of the internet to see it depending
+upon when it cached things and propogation delays etc to finish)
+</p>
+
+<p>
+There should be no need for a forwarding traffic to CNAME record.
+</p>
+
+<p>
+Then the instructions on <a href="http://wiki.shopify.com/DNS" class="urlextern" title="http://wiki.shopify.com/DNS"  rel="nofollow">http://wiki.shopify.com/DNS</a> say to
+</p>
+<ul>
+<li class="level1"><div class="li">  Enter the domain name(s) you&#039;ll be using in Shopify</div>
+</li>
+</ul>
+
+<p>
+After that is done you will now need to add shop.widgets.com or
+<a href="http://www.widgets.com" class="urlextern" title="http://www.widgets.com"  rel="nofollow">www.widgets.com</a> to your claimed addresses in the <acronym title="Domain Name System">DNS</acronym> &amp; Domains area of
+your Shopify admin under Preferences. All requests which make it to our
+servers with the domains you claimed will be routed to your shop. If you
+don&#039;t complete this step, your domain will just point to a Shopify page
+claiming that it cannot find the shop you are looking for.
+</p>
+
+<p>
+Click “Add a domain you already own”, Enter the host name, and click
+Claim this hostname.
+</p>
+
+<p>
+You may want to make that entry your Primary domain. To do this, click
+“make this my primary domain”.
+</p>
+
+<p>
+Once done correctly it should look like this:
+</p>
+
+<p>
+Simon
+</p>

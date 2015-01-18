@@ -1,0 +1,29 @@
+
+<h1 class="sectionedit1"><a name="how_can_i_remove_an_ip_address_that_denyhosts_blocked" id="how_can_i_remove_an_ip_address_that_denyhosts_blocked">How can I remove an IP address that DenyHosts blocked?</a></h1>
+<div class="level1">
+
+<p>
+If you have been accidentally locked out of one of your hosts (because DenyHosts has added it to /etc/hosts.deny you may have noticed that simply removing it from /etc/hosts.deny does not in itself correct the issue) since DenyHosts keeps track of the attempts in the WORK_DIR files. In order to cleanse the address you will need to do the following:
+</p>
+<ol>
+<li class="level1"><div class="li">    Stop DenyHosts</div>
+</li>
+<li class="level1"><div class="li">     Remove the IP address from /etc/hosts.deny</div>
+</li>
+<li class="level1"><div class="li">     Edit WORK_DIR/hosts and remove the lines containing the IP address. Save the file.</div>
+</li>
+<li class="level1"><div class="li">     Edit WORK_DIR/hosts-restricted and remove the lines containing the IP address. Save the file.</div>
+</li>
+<li class="level1"><div class="li">     Edit WORK_DIR/hosts-root and remove the lines containing the IP address. Save the file.</div>
+</li>
+<li class="level1"><div class="li">     Edit WORK_DIR/hosts-valid and remove the lines containing the IP address. Save the file.</div>
+</li>
+<li class="level1"><div class="li">     Edit WORK_DIR/user-hosts and remove the lines containing the IP address. Save the file.</div>
+</li>
+<li class="level1"><div class="li">     (optional) Consider adding the IP address to WORK_DIR/allowed-hosts</div>
+</li>
+<li class="level1"><div class="li">     Start DenyHosts </div>
+</li>
+</ol>
+
+</div>

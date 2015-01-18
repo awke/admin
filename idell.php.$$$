@@ -1,0 +1,31 @@
+<?php
+$HEADER=0;
+include('functions.inc');
+sqlconn();
+
+//disparray($_GET,get);
+//disparray($_SESSION,before);
+
+if($_SESSION[secarea][authuserdata][SUPERUSER]!=1)
+{
+die("NOT AUTHORISED");
+}
+
+$sql="SELECT idcustomers,fname,lname from customers";
+
+$result=gosql($sql,0);
+
+while ($row=mysql_fetch_assoc($result) )
+{
+$lookup[$row[idcustomers]]="$row[fname] $row[lname";
+}
+
+
+$rem=$_SESSION[invoices][ilid][$_GET[ID]];
+//print $rem;
+unset($_SESSION[invoice][data][$rem]);
+
+//disparray($_SESSION,"after _SESSION[invoice][data][$_GET[ID]]");
+
+header("Location:iadd.php");
+

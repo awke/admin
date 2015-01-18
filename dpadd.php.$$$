@@ -1,0 +1,61 @@
+<?php
+
+include('functions.inc');
+sqlconn();
+
+//disparray($_SESSION,session);
+//disparray($_POST,POST);
+$customerid=$_SESSION[secdata][customers][pindex.php][pid][$_GET[id]];
+if($customerid=="")
+{
+$customerid=$_SESSION[secdata][customers][edit.php][pid];
+}//print $customerid;
+
+
+
+
+
+
+print <<<END
+
+<h2>Adding Domain Package</h2>
+<form method="post" action="dpupdatea.php">
+
+END;
+
+$sql="SELECT idpackages,description from packages";
+
+$result=gosql($sql,0);
+
+while ($row=mysql_fetch_assoc($result) )
+{
+$lookup[$row[idpackages]]=$row[description];
+}
+
+//$sql="SELECT * from packdom WHERE idpackdom='$customerid'";
+
+
+//$result=gosql($sql,0);
+//$row=mysql_fetch_assoc($result);
+$row=array("",packages_idpackages=>"","","psdate"=>"","pedate"=>"","pbdate"=>"","ppdate"=>"");
+$desc=array("","Package","","Start Date","End Date","Last Billed Date","Last Paid Date");
+$function=array(array(1),array(2,$lookup),array(1),array(0),array(0),array(0),array(0));
+//disparray($function);
+edittable("email",0,"usual",$row,$desc,$function);
+
+
+$_SESSION[secdata][customers][edit.php][pid]=$customerid;
+unset($_SESSION[secdata][customers][index.php][dpid]);
+
+
+//phpinfo();
+
+
+
+bottom();
+
+//disparray($_SESSION);
+
+
+
+

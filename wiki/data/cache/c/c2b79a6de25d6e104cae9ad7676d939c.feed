@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://secure.awke.co.uk/admin/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://secure.awke.co.uk/admin/wiki/feed.php">
+        <title>AWKE Admin</title>
+        <description></description>
+        <link>https://secure.awke.co.uk/admin/wiki/</link>
+        <image rdf:resource="https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico" />
+       <dc:date>2010-09-28T13:53:22+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=2007&amp;rev=1234129867&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=2008&amp;rev=1234129723&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=2009&amp;rev=1235859299&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=2010&amp;rev=1263767505&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=awke_agm&amp;rev=1263758245&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=client_email_setup&amp;rev=1212423530&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=customer_loyalty_system&amp;rev=1238018508&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=email_templates&amp;rev=1221507355&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=extending_disc_space&amp;rev=1266143584&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_remote_backup_services&amp;rev=1266525090&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_xens&amp;rev=1266524871&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=login_details_to_admin_panels&amp;rev=1270294986&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=looking_at_logs&amp;rev=1219442258&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=mailing_lists&amp;rev=1240319235&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=plans_for_new_invoice_system&amp;rev=1229781724&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=redirecting_domains&amp;rev=1279043355&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=secondary_dns&amp;rev=1266143526&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=start&amp;rev=1266523246&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=useful_information&amp;rev=1279043288&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=users_over_disk_space_bandwidth&amp;rev=1221507376&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico">
+        <title>AWKE Admin</title>
+        <link>https://secure.awke.co.uk/admin/wiki/</link>
+        <url>https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=2007&amp;rev=1234129867&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-08T21:51:07+01:00</dc:date>
+        <title>2007</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=2007&amp;rev=1234129867&amp;do=diff</link>
+        <description>01. How to solve the current problems.
+Discussed the current problems, and what has been happening. Ran all the current updates available and continue to monitor to see what happens. If the server continues to stay up then we will leave it, but otherwise will take it back to the original December 2006 build.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=2008&amp;rev=1234129723&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-08T21:48:43+01:00</dc:date>
+        <title>2008</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=2008&amp;rev=1234129723&amp;do=diff</link>
+        <description>Opened at 15:35 – Closed at 18:15
+
+1. Minutes and Actions from 2007 Meeting
+
+	*  Minutes from previous meeting were reviewed and the following issues arose.
+	*  Ben to add his details to the customer system
+	*  Decision taken not to investigate a savings account because of the high cash turn over and because we owe money back to us.
+	*  Reminder that all need to send emails to all if they are left in the Admin email account for too long.
+	*  Ben to check that the ACTIONS mailing list is still wo…</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=2009&amp;rev=1235859299&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-28T22:14:59+01:00</dc:date>
+        <title>2009</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=2009&amp;rev=1235859299&amp;do=diff</link>
+        <description>2009 AWKE AGM:
+
+Agenda Items:
+
+	*  Look at actions from last year
+	*  Review of Previous Year
+	*  A look at accounts (financial)
+	*  Review at how the new invoice system worked
+	*  Look at the Terms &amp; Conditions/Acceptable User Policy, make sure that the change to accounting year is included (please read in advance)
+	*  Look at the number of users
+	*  Review the jump vps ?
+	*  Upgrading packages on server</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=2010&amp;rev=1263767505&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-17T22:31:45+01:00</dc:date>
+        <title>2010</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=2010&amp;rev=1263767505&amp;do=diff</link>
+        <description>Meeting took place on Sunday 17th January 2010 @ 19.36
+
+1. NEW SERVERS
+
+
+We have three new servers, plus backup space. These will replace the Bitfolk server in due course. Backup server isn't currently working correctly, there are issues relating to the configuaration.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=awke_agm&amp;rev=1263758245&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-17T19:57:25+01:00</dc:date>
+        <title>awke_agm</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=awke_agm&amp;rev=1263758245&amp;do=diff</link>
+        <description>AWKE AGM
+
+
+	*  2007
+
+	*  2008
+
+	*  2009
+
+	*  2010</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=client_email_setup&amp;rev=1212423530&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-02T17:18:50+01:00</dc:date>
+        <title>client_email_setup</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=client_email_setup&amp;rev=1212423530&amp;do=diff</link>
+        <description>I had an issue while helping Michael Flemming set his email up.  When using the outlook test it failed.
+
+It turns out when you send the mail from inside the application its fine, the test fails though</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=customer_loyalty_system&amp;rev=1238018508&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-25T22:01:48+01:00</dc:date>
+        <title>customer_loyalty_system</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=customer_loyalty_system&amp;rev=1238018508&amp;do=diff</link>
+        <description>====== Customer Loyalty System
+
+
+
+In order to grow the business we need to introduce a customer loyaly system.
+
+First thoughts on it:
+
+We offer each customer the opportunity to earn upto a years free standard web hosting package. For each new customer introduced to AWKE will credit the customer with £2.50 up to a maximum of 12 per year.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=email_templates&amp;rev=1221507355&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-15T20:35:55+01:00</dc:date>
+        <title>email_templates</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=email_templates&amp;rev=1221507355&amp;do=diff</link>
+        <description>*  Users over disk space/bandwidth</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=extending_disc_space&amp;rev=1266143584&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-14T10:33:04+01:00</dc:date>
+        <title>extending_disc_space</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=extending_disc_space&amp;rev=1266143584&amp;do=diff</link>
+        <description>To extend a user's disk space:
+
+
+	*  Login to the server
+	*  Run this command (what are they?)
+	*  lvextend -L+100M /dev/storage/madcrnp (where the last part is the domain username and the number is the amount please use amounts of 100M)
+
+NEW:
+
+	*  resize2fs /dev/storage/madcrnp (where last part is the domain username)</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_remote_backup_services&amp;rev=1266525090&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T20:31:30+01:00</dc:date>
+        <title>list_of_remote_backup_services</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_remote_backup_services&amp;rev=1266525090&amp;do=diff</link>
+        <description>List of Remote Backup Services
+
+
+
+SplitServ
+
+
+50GB 
+$3.95 a month 
+$47.40 a year
+
+supports xattrs
+and self compiled rsync 3.0.7
+
+Looks good and supports crontab support etc for rsnapshot.
+
+SSH IP: 207.210.108.130
+
+SSH User: satack (trying to get it changed)</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_xens&amp;rev=1266524871&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T20:27:51+01:00</dc:date>
+        <title>list_of_xens</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_xens&amp;rev=1266524871&amp;do=diff</link>
+        <description>CURRENT
+
+ETASERVER
+
+XenVZ
+
+Giga VPS: 20gb space, 768mb RAM, 1536mb Swap Xen, 150gb data transfer @
+£23.94 GBP per 6 month(s) 2 64bit cpus
+
+THIS IS A RATHER AMAZING OFFER.  This machine is theoretically capable
+of replacing the bitfolk vps for about 10% of the bill! but doesnt
+include backup MX &amp; DNS etc.  Very slightly less diskspace than we were
+actively using on bitfolk.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=login_details_to_admin_panels&amp;rev=1270294986&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-03T12:43:06+01:00</dc:date>
+        <title>login_details_to_admin_panels</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=login_details_to_admin_panels&amp;rev=1270294986&amp;do=diff</link>
+        <description>Thetaserver
+
+
+Jump
+
+ssh interface
+
+ssh to vps-tfm4.jump.net.uk
+
+username awketheta
+
+port 22
+
+usual backup admin password
+
+This allows shutdown, startup of vps, console, and using uptime can get the dom0 load average.
+
+often left in top mode, so you can see total of data transferred &amp; disk ops since boot</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=looking_at_logs&amp;rev=1219442258&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-22T22:57:38+01:00</dc:date>
+        <title>looking_at_logs</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=looking_at_logs&amp;rev=1219442258&amp;do=diff</link>
+        <description>Useful logs
+
+apache logs
+
+/Supported/logs/apache
+
+followed by domain and then year
+
+eg
+deltaserver:~# ls /Supported/logs/apache/www.awke.co.uk/2008/
+1.log.bz2  2.log.bz2  3.log.bz2  4.log.bz2  5.log.bz2  6.log.bz2  7.log.bz2  8.log
+
+the number is the monthto read bz2 to screen
+eg
+bunzip2 -kc 1.log.bz2|les</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=mailing_lists&amp;rev=1240319235&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-21T14:07:15+01:00</dc:date>
+        <title>mailing_lists</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=mailing_lists&amp;rev=1240319235&amp;do=diff</link>
+        <description>mailing list installed to  /Supported/domains/listserver.awke.co.uk/mailman/bin/
+
+deltaserver:~# /Supported/domains/listserver.awke.co.uk/mailman/bin/
+add_members     check_db        config_list     find_member     list_admins     mailmanctl      qrunner         rmlist          unshunt         
+arch            check_perms     convert.py      fix_url.py      list_lists      mmsitepass      rb-archfix      show_qfiles     update          
+b4b5-archfix    cleanarch       discard         genaliases …</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=plans_for_new_invoice_system&amp;rev=1229781724&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-12-20T14:02:04+01:00</dc:date>
+        <title>plans_for_new_invoice_system</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=plans_for_new_invoice_system&amp;rev=1229781724&amp;do=diff</link>
+        <description>Invoice System Thoughts 
+
+The new invoice system needs to be straight forward to use.
+
+It needs to be possible to update the system in the future.
+
+The system should:
+
+Twenty days before the domain is due for renewal send an email to the customer asking them if they would like to renew.√</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=redirecting_domains&amp;rev=1279043355&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-13T18:49:15+01:00</dc:date>
+        <title>redirecting_domains</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=redirecting_domains&amp;rev=1279043355&amp;do=diff</link>
+        <description>&lt;URL: &lt;https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57&gt; &gt;
+
+On 09/07/2010 16:07, Ryan Ramstad via RT wrote:
+
+	&quot; &gt; 
+ &gt; Fri Jul 09 16:07:25 2010: Request 57 was acted upon.
+ &gt;  Transaction: Ticket created by phaedrus_25_@hotmail.com
+ &gt;        Queue: General
+ &gt;      Subject: Knighthawk Deliveries
+ &gt;        Owner: Nobody
+ &gt;   Requestors: phaedrus_25_@hotmail.com
+ &gt;       Status: new
+ &gt;  Ticket &lt;URL: &lt;https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57&gt; &gt;
+ &gt; 
+ &gt; 
+ &gt; 
+ &gt; Good day, we've…</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=secondary_dns&amp;rev=1266143526&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-14T10:32:06+01:00</dc:date>
+        <title>secondary_dns</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=secondary_dns&amp;rev=1266143526&amp;do=diff</link>
+        <description>We now use our own.
+
+The DNS servers are 
+
+ns.awke.co.uk
+ns1.awke.co.uk
+ns2.awke.co.uk
+
+You do not need to do anything to get these to run.  If you add in on the main server that you want dns and set type to master then it will automatically distribute the list of domains to the two backups who will pull the dns files from the master.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=start&amp;rev=1266523246&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T20:00:46+01:00</dc:date>
+        <title>start</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=start&amp;rev=1266523246&amp;do=diff</link>
+        <description>ToDo List
+
+AWKE AGM
+
+Customer Loyalty System
+
+Client Email Setup
+
+Useful Information
+
+Setting up New User Accounts
+
+Plans for New Invoice System
+
+List of XENs
+
+List of Remote Backup Services
+
+Login details to admin panels</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=useful_information&amp;rev=1279043288&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-13T18:48:08+01:00</dc:date>
+        <title>useful_information</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=useful_information&amp;rev=1279043288&amp;do=diff</link>
+        <description>This page is about providing helpful information.
+
+
+	*  Extending Disc Space
+	*  Looking At Logs
+	*  Mailing Lists
+	*  Email Templates
+	*  Secondary DNS
+	*  Redirecting Domains</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=users_over_disk_space_bandwidth&amp;rev=1221507376&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-15T20:36:16+01:00</dc:date>
+        <title>users_over_disk_space_bandwidth</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=users_over_disk_space_bandwidth&amp;rev=1221507376&amp;do=diff</link>
+        <description>Hello Simon,
+
+Hope you are well. As you are probably aware your site has been steadily
+growing in it's usage of disk space and bandwidth traffic. For instance
+last month you used 1.43GB &amp; July was 1.24GB and disk space has been
+increased once a month for the last two months. These are consistantly
+above the amounts which AWKE accounts come with as standard.</description>
+    </item>
+</rdf:RDF>

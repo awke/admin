@@ -1,0 +1,46 @@
+Hotfix release available to prevent XSS attack via SWF uploads: 2014-09-29b "Hrun".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [46.2] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+Hotfix release available: 2014-09-29a "Hrun".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [46.1] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release available: 2014-09-29 "Hrun".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [46] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+Hotfix release available to prevent XSS attack via SWF uploads: 2014-05-05c "Ponder Stibbons".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [44.3] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+Security Hotfix 2014-05-05b to prevent zero byte attacks on external auth systems is available.
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [44.2] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+Security Hotfix 2014-05-05a for <a href="https://github.com/splitbrain/dokuwiki/issues/765">Issue 765</a> available.
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [44.1] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release available: 2014-05-05 "Ponder Stibbons".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [44] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release available: 2013-12-08 "Binky".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [43] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release candidate available: 2013-11-18 "Binky" RC2.
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [42] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release candidate available: 2013-10-28 "Binky" RC1.
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [41] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release available: 2013-05-10 "Weatherwax".
+          <a href="http://www.splitbrain.org/go/dokuwiki">upgrade now!</a> [40] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release candidate available: 2013-03-06 "Weatherwax" RC1.
+          <a href="http://www.splitbrain.org/go/dokuwiki">upgrade now!</a> [39] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release available: 2012-10-13 "Adora Belle".
+          <a href="http://www.splitbrain.org/go/dokuwiki">upgrade now!</a> [38] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+New release candidate available: 2012-09-10 "Adora Belle" RC1.
+          <a href="http://www.splitbrain.org/go/dokuwiki">upgrade now!</a> [37] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+<a href="http://www.splitbrain.org/go/dokuwiki">Hotfix Release</a> available. [36.2] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%
+<a href="http://www.splitbrain.org/go/dokuwiki">Hotfix Release</a> available. [36.1] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a>
+%

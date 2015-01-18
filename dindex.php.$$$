@@ -1,0 +1,167 @@
+<?php
+
+include('functions.inc');
+sqlconn();
+
+//disparray($_SESSION);
+
+if($_SESSION[secarea][authuserdata][SUPERUSER]!=1)
+{
+die("NOT AUTHORISED");
+}
+
+$sql="SELECT pridomain,deactivated,D_ID,domainn from domains";
+
+$result=gosql($sql);
+
+while($row=mysql_fetch_assoc($result))
+{
+
+$customers[][data]=$row;
+}
+
+
+
+
+
+$loc=0;
+$tloc=0;
+$eloc=0;
+foreach($customers as $id=>$data)
+{
+$customerid=$data[data][D_ID];
+//disparray($data,DATA);
+$sql="SELECT idcustdom,customers_idcustomers,fname,lname,billed from custdom,customers WHERE customers_idcustomers=idcustomers AND domains_D_ID='$customerid'";
+$result=gosql($sql,0);
+
+
+
+if(mysql_num_rows($result)>0)
+{
+$tloc1=0;
+while($row=mysql_fetch_assoc($result))
+{
+
+if($row[billed]==1)
+{
+$tdatadisp[]=array("<b>$row[fname]</b>","<b>$row[lname]</b>");
+}
+else
+{
+$tdatadisp[]=array($row[fname],$row[lname]);
+
+}
+$tuniq[$tloc1]=$tloc;
+$_SESSION[secdata][customers][pindex.php][cdid][$tloc]=$row[idcustdom];
+$tloc++;
+$tloc1++;
+}
+$tkeys=array("First Name","Last Name");
+
+$tfunction=array(array("",""));
+
+
+//$tkeys=array("Cost","Description","Start Date","End Date");
+//$tfunction=array(array("Edit","<a href=\"pdedit.php?id=%UNIQ%\">Edit</a>"),array("Delete","<a href=\"pddel.php?id=%UNIQ%\">Delete</a>"));
+
+$teldata=disptable($tkeys,$tdatadisp,$tuniq,$tfunction,"usual",1);
+unset($tdatadisp);
+$teldata=$teldata."<br><a href=\"cdadd.php?id=%UNIQ%\">Add Customer Link</a>";
+}
+else
+{
+$teldata="<br><a href=\"cdadd.php?id=%UNIQ%\">Add Customer Link</a>";
+}
+
+
+$sql="SELECT * from packdom,packages WHERE packages_idpackages=idpackages AND domains_D_ID=$customerid";
+$result=gosql($sql);
+
+//$emaildata="<table class=\"%TABCLASS%-email\"><tr><th>Description</th><th>Email</th></tr>";
+if(mysql_num_rows($result)>0)
+{
+$eloc1=0;
+while($row=mysql_fetch_assoc($result))
+{
+$customers[$id][tel][]=$row;
+if($row[pri]==1)
+{
+$edatadisp[]=array("<b>$row[description]</b>","<b>$row[email]</b>");
+}
+else
+{
+$edatadisp[]=array("$row[description]","$row[psdate]",$row[pedate],$row[pbdate],$row[ppdate]);
+
+}
+$euniq[$eloc1]=$eloc;
+$_SESSION[secdata][customers][index.php][dpid][$eloc]=$row[idpackdom];
+$eloc++;
+$eloc1++;
+}
+//disparray($euniq);
+
+$ekeys=array("Package<br>Description","Start Date","End Date","Last Billed<br>Date","Last Paid<br>Date");
+$efunction=array(array("Edit","<a href=\"dpedit.php?id=%UNIQ%\">Edit</a>"),array("Delete","<a href=\"dpdel.php?id=%UNIQ%\">Delete</a>"));
+
+$emaildata=disptable($ekeys,$edatadisp,$euniq,$efunction,"usual-email",1);
+unset($edatadisp);
+$emaildata=$emaildata."<br><a href=\"dpadd.php?id=%UNIQ%\">Add Domain Package</a>";
+}
+else
+{
+$emaildata="<br><a href=\"dpadd.php?id=%UNIQ%\">Add Domain Package</a>";
+}
+
+
+
+
+
+
+
+if($data[data][deactivated]==1)
+$add="DEACTIVATED ";
+else
+$add="";
+if($data[data][pridomain]!=0)
+$add=$add."<u>SUBDOMAIN:  ";
+
+
+$datadisp[]=array("$add".$data[data][domainn],$teldata,$emaildata);
+
+
+$uniq[$loc]=$loc;
+$_SESSION[secdata][customers][pindex.php][pid][$loc]=$customerid;//package id
+$loc++;
+
+
+}
+
+
+//disparray($customers);
+
+//$function=array(array("Edit","<a href=\"pedit.php?id=%UNIQ%\">Edit</a>"),array("Delete","<a href=\"pdel.php?id=%UNIQ%\">Delete</a>"));
+$function=array(array("",""));
+$keys=array("Domain","Customers","Packages");
+
+
+
+print <<<END
+<h1>Domain -- Packages</h1>
+<br>
+
+END;
+//disparray($data);
+
+$rt=disptable($keys,$datadisp,$uniq,$function,"usual",1);
+print $rt;
+//disparray($uniq,"uniq");
+//disparray($function,"function");
+//disparray($_SESSION,session);
+
+print <<<END
+<a href="padd.php">Add Package</a>
+<br>
+<br>
+END;
+bottom();
+

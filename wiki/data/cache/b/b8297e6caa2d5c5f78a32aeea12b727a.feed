@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://secure.awke.co.uk/admin/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://secure.awke.co.uk/admin/wiki/feed.php">
+        <title>AWKE Admin</title>
+        <description></description>
+        <link>https://secure.awke.co.uk/admin/wiki/</link>
+        <image rdf:resource="https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico" />
+       <dc:date>2011-06-28T20:14:42+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico">
+        <title>AWKE Admin</title>
+        <link>https://secure.awke.co.uk/admin/wiki/</link>
+        <url>https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico</url>
+    </image>
+</rdf:RDF>

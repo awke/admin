@@ -1,0 +1,33 @@
+
+<h1 class="sectionedit1"><a name="extending_user_disk_space" id="extending_user_disk_space">Extending User Disk Space</a></h1>
+<div class="level1">
+
+<p>
+To extend a user&#039;s disk space:
+</p>
+<ol>
+<li class="level1"><div class="li"> Login to the server</div>
+</li>
+<li class="level1"><div class="li"> Run this command (what are they?)</div>
+</li>
+<li class="level1"><div class="li"> lvextend -L+100M /dev/storage/madcrnp (where the last part is the domain username and the number is the amount please use amounts of 100M)</div>
+</li>
+</ol>
+
+<p>
+NEW:
+</p>
+<ol>
+<li class="level1"><div class="li"> resize2fs /dev/storage/madcrnp (where last part is the domain username)</div>
+</li>
+</ol>
+
+<p>
+OLD:
+</p>
+<ol>
+<li class="level1"><div class="li"> resize_reiserfs /dev/storage/madcrnp (where the last part is the domain username)</div>
+</li>
+</ol>
+
+</div>

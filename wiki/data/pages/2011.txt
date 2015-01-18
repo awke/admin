@@ -1,0 +1,59 @@
+Held at 21 Ealing Village, on Sunday 9th with Ben, Peter, Simon.
+
+
+===== Minutes and actions of last meeting =====
+The minutes of the last meeting were agreed and the actions considered to either have been done or that they would be covered as part of this meeting.
+
+
+===== Review of last year inc finances and number of customers =====
+
+We have closed the year with £1381.61 compared to £642.13 at the sametime in 2009. 
+
+We still have around the same number of customers, despite losing one or two. As of today we have around 36 deactivated domains, 91 active domains
+
+Relatively painless year, other than the server rebooting randomly and not being able to access email via phones even though that was noting to do with AWKE. 
+
+The ticketing system has worked very well, although some improvement may still need to be improved. It was felt tha thte ticketing system really helped with sharing out the work a bit more.
+
+First time needed to provide out of office support, but this has been a fudge and really need it not to require our intervention.
+**ACTION:** Ben to invesitgate how we can setup the system to provide out of office support for customers.
+
+There were a number of occassions when customers were being sent invoice reminders even though they had paid them. This inpart was due to not being aware that they had been paid. **ACTION:** ALL to think about how this can be improved. It maybe that in the proposed new structure that this will change.
+
+UKHOSTS: are not as good as they were. There have certainly been more problems than previously with them. Seriously need to think about finding an alternative company. 
+**ACTION:** Find a new company to provide domain registration.
+
+===== Invoices for 2011/2012 and prices =====
+Pricing should be left as they are as they cover costs and are considered to be a good package. It costs about £600 a year for the servers as out goings. 
+
+Agreed that we would give Bartrams two month discount due to problems over the last 12 months as a good will gesture. 
+
+Need to actively work on the Loyalty Scheme this year. **ACTION:** Peter to circulate the plan for all to help implement it.
+
+ART2MURALS have significantly been using a large amount of bandwidth in the last few months.
+**ACTION:** All, (Ben) to investigate the situation with this. Simon thinks that there maybe a bug in the bandwidth script in use.
+
+Delay to sending out invoices until the end of February to allow for the change over of accounts but will be for the same period. **ACTION:** Peter to send an email out to customers about this.
+
+===== Forming LLP and bank account =====
+
+The LLP was setup via company-wizard. The new bank account will be setup at Santander when the paperwork is sorted out and there is a company number is used.
+
+===== Social media =====
+
+Discussion around the use of 'social media' by AWKE. Simon raised some concerns around its use in terms of who will do the work. Ben and Peter agreed that they would look after a twitter and facebook account. Twitter password is 4BKcj3aC
+
+===== AOB =====
+
+Documents to be reviewed and shared using Google Docs. This should be RO for other users and a link to this can be sent out to the users on the new domain created email along with a coment that it can change and give notice period.
+
+
+Non-primary servers: Zeta server is costing to much for its spec and return. The feeling is that we should not renew it and do not need another third machine. The reason for having the machine has been forgotten and is not currently required for any reason. **ACTION:** Simon to cancel the subscription and to take a .tar/image of it so that if needed we can setup another machine if necessary. 
+
+Backup server. It costs about £3.50 a month and a question of whether there are cheaper ways of doing it. Further discussions and thoughts on this need to happen.
+
+Ben and Peter asked Simon to manage the emails going into the admin account. There were a number of changes made. THE INVOICE CRON JOB WAS DISABLED.
+
+Data Protection - we need to think about how we deal with Data Protection. **ACTION:** Peter to work on this.
+
+Database Schema: **ACTION:** Ben to investigate the creation of an automated schema of the database.

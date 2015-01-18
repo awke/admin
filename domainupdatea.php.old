@@ -1,0 +1,117 @@
+<?php 
+$HEADER=0;
+include('functions.inc');
+sqlconn();
+
+if($_SESSION[secarea][authuserdata][SUPERUSER]!=1)
+{
+die("NOT AUTHORISED");
+}
+
+$array=retedittable("add",0);
+
+if($array[0]==1)
+{
+$first=0;
+$sqlins="";
+$sqlins1="";
+$error=0;
+
+$array[1][directory]=$array[1][domainn];
+$array[1][lastupdated]=date('YmdHis');
+
+$domainname=$array[1][domainn];
+$sql="SELECT domainn FROM domains WHERE domainn='$domainname'";
+$result=gosql($sql,0);
+
+if(mysql_num_rows($result)>=1)
+{
+$error=1;
+$_SESSION[error][]="Domain name already in use";
+}
+
+if (strcmp($array[1][username],"")==0)
+{
+$error=1;
+$_SESSION[error][]="Please enter a username";
+}
+
+if (ereg("[[:space:]]", $array[1][username]))
+{ 
+$error=1;
+$_SESSION[error][]="Please correct username";
+}
+
+if (ereg("[[:space:]]", $array[1][domainn]))
+{ 
+$error=1;
+$_SESSION[error][]="Please correct domain name";
+}
+
+if (strlen($array[1][username]) >= 9)
+{
+$error=1;
+$_SESSION[error][]="User Name must be 8 or less characters";
+}
+
+if (strcmp($array[1][password1],"")==0)
+{
+$array[1][password1]=passgen();
+}
+if (strcmp($array[1][password2],"")==0)
+{
+$array[1][password2]=passgen();
+}
+
+if($error==0)
+{
+foreach($array[1] as $key => $value)
+{
+	if($first==0)
+	{
+		$first=1;
+	}
+	else
+	{
+		$sqlins=$sqlins . ", ";
+	}
+	$sqlins=$sqlins . "$key ='$value' ";
+}
+$sql="INSERT INTO domains SET $sqlins";
+gosql($sql,0);
+clredittable("add",0);
+
+$domain=mysql_insert_id();
+$date=date('YmdHis');
+$dnsdata=dnsdetails();
+
+foreach ($dnsdata as $key => $value)
+	{
+	$details = explode(" ", $value);
+	if (isset($details[3]))
+		{
+		$sql="INSERT INTO dnsrecords SET domain_id='$domain', name='$details[0]', type='$details[1]', content='$details[2]', prio='$details[3]', change_date='$date'";
+		gosql($sql,0);
+		}
+		else
+		{
+		$sql="INSERT INTO dnsrecords SET domain_id='$domain', name='$details[0]', type='$details[1]', content='$details[2]', change_date='$date'";
+		gosql($sql,0);
+		}
+	}
+	
+$sql="INSERT INTO superusercommands SET command='10',  parameters='$domain'"; //, lastupdated='$date'";
+gosql($sql,0);
+
+header("Location: domain.php");
+
+}
+else
+{//error=1 therefor error
+
+header("Location: domainadd.php");
+exit();
+}
+
+}
+?>

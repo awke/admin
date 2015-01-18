@@ -1,0 +1,347 @@
+<?php
+$HEADER=1;
+include('functions.inc');
+sqlconn();
+print "<div class=\"infolabel\">Domain Renewal Single</div>";
+print "<div class=\"subtabinfo\">";
+
+function subretdata($v)
+{
+$t=explode(" ",$v);
+unset($dat);
+foreach($t as $v)
+{
+$tt=rtrim($v);
+if(strlen($tt)>1)
+$datj[]=$tt;
+}
+return $datj;
+}
+
+function retdata($whois,$name="")
+{
+unset($dataret);
+$dataret[name]=$name;
+$dataret[Tag]="Somone";
+foreach($whois as $v)
+{
+$res2=strpos($v,"UKHOSTS");
+//$dataret[Tag]="Someone";
+if($res2!==FALSE)
+{
+//print $v;
+$dataret[Tag]="UKHOSTS";
+//print "$dataret[Tag]\r\n";
+}
+
+$res3=strpos($v,"Tag = ");
+if($res3!==FALSE)
+{
+$dataret[Tag]=substr($v,$res3+6,-1);//,strpos($v,")"));
+}
+
+
+
+//RENEWAL DATE
+$res=strpos($v,"Renewal date:");
+$res1=strpos($v,"Record expires on");
+$cor=0;
+if($res!=FALSE)
+$cor=1;
+if($res1!=FALSE)
+$cor=1;
+if($res2!=FALSE)
+$cor=1;
+if($cor==1)
+{
+$sdataret=subretdata($v);
+$y=count($sdataret)-1;
+$dataret[RenewalDate]=$sdataret[$y];
+if($res1!==FALSE)
+{
+$dataret[RenewalDate]=substr($dataret[RenewalDate],0,strlen($dataret[RenewalDate])-1);
+}
+
+}
+
+//RENEWAL DATE
+$res=strpos($v,"Expiration Date:");
+$cor=0;
+if($res!=FALSE)
+$cor=1;
+if($cor==1)
+{
+$sdataret=subretdata($v);
+$y=count($sdataret)-3;
+$u=explode(":",$sdataret[$y]);
+$dataret[RenewalDate]=$u[1]; //substr($u[1],0,strlen($u[1])-2);
+$dataret[RenewalDate]=substr($v,$res+17);
+}
+
+//Purchase Date
+$res=strpos($v,"Registered on:");
+$res1=strpos($v,"Record created on");
+$cor=0;
+if($res!=FALSE)
+$cor=1;
+if($res1!=FALSE)
+$cor=1;
+if($cor==1)
+{
+$sdataret=subretdata($v);
+$y=count($sdataret)-1;
+$dataret[PurchaseDate]=$sdataret[$y];
+if($res1!==FALSE)
+{
+$dataret[PurchaseDate]=substr($dataret[PurchaseDate],0,strlen($dataret[PurchaseDate])-1);
+}
+
+}
+
+//Purchase Date
+$res=strpos($v,"Created On:");
+$cor=0;
+if($res!=FALSE)
+$cor=1;
+if($cor==1)
+{
+$sdataret=subretdata($v);
+$y=count($sdataret)-3;
+$u=explode(":",$sdataret[$y]);
+$dataret[PurchaseDate]=$u[1];
+$dataret[PurchaseDate]=substr($v,$res+12);
+}
+
+$res=strpos($v,"Creation Date:");
+$cor=0;
+if($res!=FALSE)
+{
+$dataret[PurchaseDate]=substr($v,$res+15);
+}
+//$dataret[atack0]="No"
+
+//awke0
+$res=stristr($v,"ns.awke.co.uk");
+$cor=0;
+if($res!=FALSE)
+$cor=1;
+if($cor==1)
+{
+//$sdataret=subretdata($v);
+//$y=count($sdataret)-1;
+$dataret[awke0]="Yes";
+}
+
+
+//awke1
+$res=stristr($v,"ns1.awke.co.uk");
+$cor=0;
+if($res!=FALSE)
+$cor=1;
+if($cor==1)
+{
+//$sdataret=subretdata($v);
+//$y=count($sdataret)-1;
+$dataret[awke1]="Yes";
+}
+
+
+}
+
+
+//print $name;
+//
+//print_r($dataret);
+
+
+
+return $dataret;
+
+}
+
+
+sqlconn();
+
+$sql="SELECT * from domains WHERE deactivated='0'  ORDER BY domainn";
+
+$result=gosql($sql,0);
+
+//Record expires on 
+//Renewal Date:   
+$cnt=0;
+while($row=mysql_fetch_assoc($result))
+{
+//print "<h1>$row[domainn]</h1><br>";
+//print "<pre>\n";
+$name=$row[domainn];
+if(strpos($name,".uk")===FALSE)
+{
+}
+else
+{
+sleep(1.1);
+}
+
+unset($whois);
+$whois1=exec("whois $name",$whois);;
+//foreach($whois as $v)
+//{
+//print $v."\n";
+//}
+
+
+//print "</pre><hr><br>\n";
+
+//disparray($whois,whois);
+
+
+//print "$name :";
+
+
+$returned=retdata($whois,$row[domainn]);
+
+
+$ukh="#000000";
+$ukht="";
+if($returned[Tag]=="UKHOSTS")
+{
+$ukh="#bb0000";
+$ukht="<font color=\"red\">**</font>";
+}
+
+
+global $rows;
+//disparray($returned);
+$now=time();
+$renwl=strtotime($returned[RenewalDate]);
+
+
+$bgcolor="#00FF00";
+$weeks6=$renwl-(60*60*24*7*6);
+$weeks3=$renwl-(60*60*24*7*3);
+$weeks0=$renwl-(60*60*24*4.5);
+$weeks52=$renwl-(60*60*24*7*25);
+
+if($now>=$weeks52)
+{
+$bgcolor="#99ff66";
+}
+
+if($now>=$weeks6)
+{
+$bgcolor="#ffff33";
+}
+
+if($now>=$weeks3)
+{
+$bgcolor="#ffcc00";
+}
+
+
+if($now>=$weeks0)
+{
+$bgcolor="#ff0000";
+}
+
+if($now>=$renwl)
+{
+$bgcolor="#cc33ff";
+
+//print "<pre>ERROR: $name " . print_r($whois,true) . "<br>";
+
+
+}
+
+
+$purch=strtotime($returned[PurchaseDate]);
+
+$yr6=$purch+(60*60*24*365*6);
+//print "now:$now@@pu:$purch@@@6yrs:$yr6<br>";
+
+$pcolor="#000077";
+
+
+if(($purch+(60*60*24*365*6))>=$now)
+{
+$pcolor="#000099";
+}
+
+if(($purch+(60*60*24*365*4))>=$now)
+{
+$pcolor="#0000BB";
+}
+if(($purch+(60*60*24*365*2))>=$now)
+{
+$pcolor="#0000DD";
+}
+if(($purch+(60*60*24*365*1))>=$now)
+{
+$pcolor="#0000FF";
+}
+
+
+if($returned[awke0]=="Yes")
+{
+$bgcolor1="";
+}
+else
+{
+$bgcolor1="bgcolor=\"#FF0000\" ";
+}
+
+if($returned[awke1]=="Yes") 
+{
+$bgcolor2=""; 
+}
+else
+{
+$bgcolor2="bgcolor=\"#FF0000\" "; 
+}
+
+
+
+//print "domain:$returned[name]@@now:$now@@@renwl:$renwl@@@@weeks6:$weeks6@@@@@weeks3:$weeks3<br>\n";
+
+
+
+//$r="<tr><td bgcolor=\"$bgcolor\">$returned[name]</td><td bgcolor=\"$pcolor\">$returned[PurchaseDate]</td><td bgcolor=\"$bgcolor\">$returned[RenewalDate]</td><td>$returned[atack0]</td><td>$returned[atack1]</td><td>$returned[awke0]</td><td>$returned[awke1]</td></tr>";
+
+$r="<tr><td bgcolor=\"$bgcolor\">$returned[name]</td><td bgcolor=\"$pcolor\">$returned[PurchaseDate]</td><td bgcolor=\"$bgcolor\">$returned[RenewalDate] $ukht</td><td $bgcolor1 >$returned[awke0]</td><td $bgcolor2 >$returned[awke1]</td><td bgcolor=\"$ukh\">$returned[Tag]</td></tr>";
+
+
+//print $r;
+$row2s[]=$r;
+}
+
+//disparray($rows);
+
+print <<<END
+</pre>
+<table class="usual">
+<tr><th>Domain Name</th><th>Purchase Date</th><th>Renewal Date</th><th>ns.awke.co.uk</th><th>ns1.awke.co.uk</th><th>TAG</td></tr>
+END;
+$t=count($row2s);
+//$t=40;
+
+
+//disparray($row2s);
+
+//}
+$v=$row2s[$a];
+foreach($row2s as $v)
+{
+//disparray(count ($row2s));
+print "$v\n";
+}
+print "</table>";
+
+print <<<END
+
+<p>Total of $t hosted/parked domains</p>
+
+END;
+print"<br><br><br><br></div>";
+bottom();
+?>
+
+

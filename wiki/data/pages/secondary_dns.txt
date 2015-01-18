@@ -1,0 +1,10 @@
+We now use our own.
+
+The DNS servers are 
+
+ns.awke.co.uk
+ns1.awke.co.uk
+ns2.awke.co.uk
+
+You do not need to do anything to get these to run.  If you add in on the main server that you want dns and set type to master then it will automatically distribute the list of domains to the two backups who will pull the dns files from the master.
+

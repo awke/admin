@@ -1,0 +1,82 @@
+<URL: https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57 >
+
+On 09/07/2010 16:07, Ryan Ramstad via RT wrote:
+> > 
+> > Fri Jul 09 16:07:25 2010: Request 57 was acted upon.
+> >  Transaction: Ticket created by phaedrus_25_@hotmail.com
+> >        Queue: General
+> >      Subject: Knighthawk Deliveries
+> >        Owner: Nobody
+> >   Requestors: phaedrus_25_@hotmail.com
+> >       Status: new
+> >  Ticket <URL: https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57 >
+> > 
+> > 
+> > 
+> > Good day, we've been trying to re-direct our www.knighthawkdelivery.com to our new site http://knighthawkdelivery.myshopify.com/ but we're having trouble doing so. We've added the new site to the DNS but can not find the domain re-direct. Any help would be great. Thank you!
+> > 
+> > Sincerely,
+> >                  Ryan Ramstad
+> > (Director)
+> > www.knighthawkdelivery.com
+> > 07821872277
+> > 
+> >  		 	   		  
+> > _________________________________________________________________
+> > http://clk.atdmt.com/UKM/go/195013117/direct/01/
+> > 
+
+Instructions from http://wiki.shopify.com/DNS
+
+
+OK I have done this for knighthawkdelivery.com (and added the steps
+below so you can do them for yourself on the other domains)
+
+YOU WILL NEED TO LOOK AT THE LAST STEP ( Enter the domain name(s) you'll
+be using in Shopify ) as I cannot do this for you
+
+Goto awke admin site https://secure.awke.co.uk/admin
+
+login
+
+click the domain
+
+then on the list of options click edit next to "DNS Record Management"
+
+then depending upon which entry to change ( I would recommend www )
+click edit
+
+change RR [type]  from A to CNAME
+change content from 212.13.216.213 to knighthawkdelivery.myshopify.com
+click submit
+
+This will change the info on our server within a couple of minutes (It
+could take upto 48hrs for the rest of the internet to see it depending
+upon when it cached things and propogation delays etc to finish)
+
+There should be no need for a forwarding traffic to CNAME record.
+
+Then the instructions on http://wiki.shopify.com/DNS say to
+
+
+    *  Enter the domain name(s) you'll be using in Shopify
+
+After that is done you will now need to add shop.widgets.com or
+www.widgets.com to your claimed addresses in the DNS & Domains area of
+your Shopify admin under Preferences. All requests which make it to our
+servers with the domains you claimed will be routed to your shop. If you
+don't complete this step, your domain will just point to a Shopify page
+claiming that it cannot find the shop you are looking for.
+
+Click "Add a domain you already own", Enter the host name, and click
+Claim this hostname.
+
+You may want to make that entry your Primary domain. To do this, click
+"make this my primary domain".
+
+Once done correctly it should look like this:
+
+Simon
+
+
+

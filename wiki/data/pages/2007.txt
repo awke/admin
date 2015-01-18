@@ -1,0 +1,85 @@
+====== AWKE Meeting 17/02/2007 ======
+
+
+01. How to solve the current problems.
+Discussed the current problems, and what has been happening. Ran all the current updates available and continue to monitor to see what happens. If the server continues to stay up then we will leave it, but otherwise will take it back to the original December 2006 build. 
+
+ACTIONS: Simon to change admin passwords
+	  Create Ben an Admin account.
+
+
+
+02. Review of Where we are - e.g. numbers of customers etc
+Have between 15-20 paying customers on the server. 
+
+ACTIONS: Peter to find out from Mark who owns which domains.
+
+
+
+03. New larger customer - should we except.
+£250 @ 40GB traffic per month (compressed for all sites) (10 sites).
+
+ACTIONS: Ben to check that offer is competitive.
+
+
+
+04. Http logging
+Issue of over 2m records in the database for 2 months using over 790mb and growing. Needed by customers. On the system logged to individual users.
+
+ACTIONS: Simon to investigate 
+
+
+
+05. Finances & Pricing Review - inc Banking Review
+Discussed prices and decided to keep the same.
+
+ACTIONS: Review in 12 months.
+Peter – look at savings accounts with the idea of keeping just a £100 float in the main account, and sweep it over on the 18th of the Month.
+	Peter to check email package = mfleming as example.
+Peter to email David about updating webhosting. All software packages need updating and needs to say that we reserve the right to review database usage. Xen = contact us to discuss requirements.
+Simon to investigate subdomain MXING
+
+
+
+06. Roles and responsibilities/procedures - inc upgrades & problems
+ACTIONS: ALL – for email left in inbox, send an email to all
+	Simon: Setup mailman on AWKE (done)
+	Peter: Setup ACTIONS and Customers mailing lists.
+	Peter: Setup alias on squirrelmail for Ben
+	Ben: To ask Simon any questions
+
+
+07. Where do we want to go in the future.
+Discussion took place and it was decided that we would continue as we are and review in 12 months.
+
+
+08. Backup/Recovery Systems (Disaster Recovery) 
+Discussion of backups and disaster recovery. 
+Re-syncing web data to the backup machine at 2.00am every night? Not all sites
+
+Config data backup?
+
+DNS backup server – via black cat? - £10 pa
+
+Bit Folk	Black Cat	Byte More
+64mb Ram	18Mb Ram	80Mb Ram
+256 Swap		
+7.5GB HDD	15GB	84GB
+20GB Traffic	50GB	25GB
+£8 per month	£15 + VAT	£15
+£80 pa		
+
+ACTIONS: 
+         Ben to investigate SMS monitoring services.
+	 Simon to investigate DNS backup options.
+
+09. Extra People
+The discussion of whether we involve extra people with the server. Decided David was the only obvious person – and already did a lot. Review next meeting.
+
+
+10. Business Cards
+The new business cards have arrived and these have been divided up into three.
+
+11. Review of Paper Work
+ACTIONS: All to check paperwork.
+

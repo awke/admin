@@ -1,0 +1,144 @@
+
+<p>
+Useful logs
+</p>
+
+<p>
+apache logs
+</p>
+
+<p>
+/Supported/logs/apache
+</p>
+
+<p>
+followed by domain and then year
+</p>
+
+<p>
+eg
+deltaserver:~# ls /Supported/logs/apache/<a href="http://www.awke.co.uk/2008/" class="urlextern" title="http://www.awke.co.uk/2008/"  rel="nofollow">www.awke.co.uk/2008/</a>
+1.log.bz2  2.log.bz2  3.log.bz2  4.log.bz2  5.log.bz2  6.log.bz2  7.log.bz2  8.log
+</p>
+
+<p>
+the number is the monthto read bz2 to screen
+eg
+bunzip2 -kc 1.log.bz2|les
+</p>
+
+<p>
+for the non bz2
+eg
+less 8.log
+</p>
+
+<p>
+/var/log/apache2
+</p>
+
+<p>
+contains error.log  having errors in it for all domains
+contains all_access.log contains access logs for all domains
+</p>
+
+<p>
+for exim mail
+</p>
+
+<p>
+deltaserver:~# ls /var/log/exim4/
+mainlog        mainlog.2.gz  mainlog.5.gz  mainlog.8.gz  paniclog.1   rejectlog.10.gz  rejectlog.4.gz  rejectlog.7.gz
+mainlog.1      mainlog.3.gz  mainlog.6.gz  mainlog.9.gz  rejectlog    rejectlog.2.gz   rejectlog.5.gz  rejectlog.8.gz
+mainlog.10.gz  mainlog.4.gz  mainlog.7.gz  paniclog      rejectlog.1  rejectlog.3.gz   rejectlog.6.gz  rejectlog.9.gz
+</p>
+
+<p>
+to view gz files to screen
+eg
+gunzip -c mainlog.10.gz | less 
+</p>
+
+<p>
+[less can be replace with other commands]
+</p>
+
+<p>
+mainlog contains most of the info, including messages going in and out 
+paniclog contains serious errors
+rejectlog contains messages rejects and why
+</p>
+
+<p>
+for mainlog exigrep is available
+ eg
+ exigrep “simon.atack@atackscomputers.co.uk” mainlog
+</p>
+
+<p>
+this will show all lines about the message it can be used with messageIDs or email addresses etc can be used to check if email from or to address has arrived etc.
+</p>
+
+<p>
+/var/log/all
+</p>
+
+<p>
+this contains all the syslog info
+</p>
+
+<p>
+grep is useful here
+</p>
+
+<p>
+eg 
+</p>
+
+<p>
+grep “user=info@knighthawkdelivery.com” /var/log/all
+</p>
+
+<p>
+or
+</p>
+
+<p>
+cat /var/log/all | grep “user=info@knighthawkdelivery.com”
+</p>
+
+<p>
+[same thing but the cat could be a bunzip2 etc] you can then pipe | this to less etc
+</p>
+
+<p>
+the above example will show when user logged into email and what type of email retrieval
+</p>
+
+<p>
+/var/log/geolizer/[website]
+contains the output of the geolizer log interpretter
+</p>
+
+<p>
+/var/log/mysql
+</p>
+
+<p>
+contains complete transaction logs of mysql commands executed [as of 2008-08-21]
+</p>
+
+<p>
+/var/log/denyhosts
+contains info on what denyhosts has done
+</p>
+
+<p>
+/var/log/clamav/
+contains info on clamav antivirus
+</p>
+
+<p>
+/var/log/mail.log
+contains mail related info mostly just hte imap and pop3 servers
+</p>

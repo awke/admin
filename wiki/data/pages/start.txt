@@ -1,0 +1,27 @@
+====== AWKE Admin WIKI ======
+
+[[ToDo List]]
+
+[[AWKE AGM]]
+
+[[Customer Loyalty System]]
+
+[[Client Email Setup]]
+
+[[Useful Information]]
+
+[[Setting up New User Accounts]]
+
+[[Plans for New Invoice System]]
+
+[[List of XENs]]
+
+[[List of Remote Backup Services]]
+
+[[Login details to admin panels]]
+
+[[How to Remove IP from Denyhosts]]
+
+
+
+{{cal>opts06rkpift8hef95enh6f3a4@group.calendar.google.com|Kite's Test}}

@@ -1,0 +1,17 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1266524713;s:8:"modified";i:1381913961;}s:7:"creator";s:11:"Simon Atack";s:11:"last_change";a:7:{s:4:"date";i:1381913961;s:2:"ip";s:14:"95.151.114.233";s:4:"type";s:1:"E";s:2:"id";s:29:"login_details_to_admin_panels";s:4:"user";s:3:"ben";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:3:{s:5:"simon";s:11:"Simon Atack";s:3:"ben";s:10:"Ben Whyall";s:8:"knighp01";s:12:"Peter Knight";}s:4:"user";s:0:"";s:5:"title";s:4:"VPSs";s:11:"description";a:2:{s:15:"tableofcontents";a:8:{i:0;a:4:{s:3:"hid";s:4:"vpss";s:5:"title";s:4:"VPSs";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:11:"thetaserver";s:5:"title";s:11:"Thetaserver";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:9:"etaserver";s:5:"title";s:9:"Etaserver";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:10:"zetaserver";s:5:"title";s:10:"Zetaserver";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:10:"iotaserver";s:5:"title";s:10:"IOTASERVER";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:14:"remote_backups";s:5:"title";s:14:"Remote Backups";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:6;a:4:{s:3:"hid";s:8:"xsbackup";s:5:"title";s:8:"xsbackup";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:7;a:4:{s:3:"hid";s:11:"splitserver";s:5:"title";s:11:"splitserver";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:320:"Thetaserver
+
+Jump
+
+ssh interface
+
+ssh to awke@awketheta.vpsconsole.jump.net.uk
+
+username awketheta
+
+port 22
+
+usual backup admin password
+
+This allows shutdown, startup of vps, console, and using uptime can get the dom0 load average.
+
+often left in top mode, so you can see total of data transferred & disk ops since boot";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1266524713;s:8:"modified";i:1381913961;}s:7:"creator";s:11:"Simon Atack";s:11:"last_change";a:7:{s:4:"date";i:1381913961;s:2:"ip";s:14:"95.151.114.233";s:4:"type";s:1:"E";s:2:"id";s:29:"login_details_to_admin_panels";s:4:"user";s:3:"ben";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:3:{s:5:"simon";s:11:"Simon Atack";s:3:"ben";s:10:"Ben Whyall";s:8:"knighp01";s:12:"Peter Knight";}s:4:"user";s:0:"";}}

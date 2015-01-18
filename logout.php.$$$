@@ -1,0 +1,11 @@
+<?php
+
+
+$PRELOGIN=1;
+include('functions.inc');
+
+unset($_SESSION[idauthusers]);
+setcookie( session_name() ,"",0,"/");
+session_destroy();
+echo "LOGGED OUT";
+print "<a href=\"main.php\">Click Here to restart</a>";

@@ -1,0 +1,53 @@
+<?php
+
+include('functions.inc');
+sqlconn();
+
+//disparray($_SESSION,session);
+//disparray($_POST,POST);
+$emailid=$_SESSION[secdata][customers][index.php][eid][$_GET[id]];
+if($emailid=="")
+{
+$emailid=$_SESSION[secdata][customers][edit.php][telid];
+}//print $customerid;
+
+
+
+
+
+
+print <<<END
+
+<h2>Editing Customer Email</h2>
+<form method="post" action="dpupdate.php">
+
+END;
+
+
+$sql="SELECT * from custemail WHERE idcustemail='$emailid'";
+
+
+$result=gosql($sql,0);
+$row=mysql_fetch_assoc($result);
+
+$desc=array("","","Email","Primary","Description");
+$function=array(array(1),array(1),array(0),array(2,array("0" => "No","1" => "Yes")),array(0));
+//disparray($function);
+edittable("email",0,"usual",$row,$desc,$function);
+
+
+$_SESSION[secdata][customers][edit.php][emailid]=$emailid;
+unset($_SESSION[secdata][customers][index.php][eid]);
+
+
+//phpinfo();
+
+
+
+bottom();
+
+//disparray($_SESSION);
+
+
+
+

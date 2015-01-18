@@ -1,0 +1,15 @@
+
+Ive done it already.
+
+You go to internet bs choose transfer domain .com enter domain name, go
+through and pay.
+
+Then you need to get the EPP Auth Code from ukhosts.
+
+Go into internetbs website admin, click domain and It will ask for the
+code. if not I think there is a warning field where you enter the code.
+
+ukhosts are legally obliged to providde the EPP auth code within so many
+days (cant remember how long)
+
+Simon

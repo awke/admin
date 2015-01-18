@@ -1,0 +1,76 @@
+table.usual
+{ text-align: center;
+font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+wi9999dth: 500px;
+background-color: #fafafa;
+border: 1px #6699CC solid;
+border-collapse: collapse;
+border-spacing: 0px; 
+} 
+
+
+a.noA:link { 
+	text-decoration: none; 
+	color: #000000}
+a.noA:visited { 
+	text-decoration: none; 
+	color: #000000
+
+
+
+table.usual-tel
+{ text-align: center;
+font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+wi9999dth: 500px;
+background-color: #fafafa;
+order-collapse: collapse;
+border-spacing: 0px; 
+} 
+
+table.invoicetopbox
+{
+th
+{
+align: right;
+}
+}
+
+table.usual-email
+{ text-align: center;
+font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+wi9999dth: 500px;
+background-color: #fafafa;
+border-collapse: collapse;
+border-spacing: 0px; 
+} 
+
+tr.tel-pri
+{
+font-weight: bold;
+}
+tr.email-pri
+{
+font-weight: bold;
+}
+
+tr.usual---even
+{
+ background-color: #aaaaaa;
+}
+body
+{
+leftmargin: 0; 
+topmargin: 0; 
+marginwidth: 0;
+marginheight: 0;
+background-color #DDDDDD;
+}

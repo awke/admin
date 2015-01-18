@@ -1,0 +1,54 @@
+
+<h1 class="sectionedit1"><a name="how_to_redirect_apache_from_domain_to_wwwdomain" id="how_to_redirect_apache_from_domain_to_wwwdomain">HOW TO REDIRECT APACHE FROM DOMAIN TO WWW.DOMAIN</a></h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "HOW TO REDIRECT APACHE FROM DOMAIN TO WWW.DOMAIN" [1-65] -->
+<h2 class="sectionedit2"><a name="code_needed_in_apachextraconf" id="code_needed_in_apachextraconf">Code needed in apachextraconf</a></h2>
+<div class="level2">
+
+<p>
+ServerAlias bartrams.net
+</p>
+
+<p>
+RewriteEngine on
+</p>
+
+<p>
+RewriteCond %{<acronym title="Hyper Text Transfer Protocol">HTTP</acronym>_HOST} ^bartrams\.net
+</p>
+
+<p>
+RewriteRule ^(.*)$ <a href="http://www.bartrams.net/" class="urlextern" title="http://www.bartrams.net/"  rel="nofollow">http://www.bartrams.net/</a>$1 [R=permanent,L]
+</p>
+
+<p>
+First line lets server answer for bartrams.net
+the next lines rewrite bartrams.net/&lt;JUNK&gt; to <a href="http://www.bartrams.net/" class="urlextern" title="http://www.bartrams.net/"  rel="nofollow">www.bartrams.net/</a>&lt;JUNK&gt;
+</p>
+
+<p>
+I honestly not sure they wanted the last part I recon they probably were only interested in the first part.
+</p>
+
+<p>
+(see ticket number 95) 
+[<acronym title="Uniform Resource Locator">URL</acronym>: <a href="https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=95]" class="urlextern" title="https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=95]"  rel="nofollow">https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=95]</a>
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Code needed in apachextraconf" [66-579] -->
+<h2 class="sectionedit3"><a name="add_in_dns_entries" id="add_in_dns_entries">add in dns entries</a></h2>
+<div class="level2">
+
+<p>
+madcornishprojectionist.co.uk. 		A 		212.13.216.213 	No
+</p>
+
+<p>
+<strong>NOTE THE DOT AFTER THE DOMAIN NAME ITS VITALLY IMPORTANT</strong>
+</p>
+
+</div>
+<!-- EDIT3 SECTION "add in dns entries" [580-] -->

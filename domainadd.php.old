@@ -1,0 +1,52 @@
+<?php
+$HEADER=1;
+include('functions.inc');
+sqlconn();
+
+if($_SESSION[secarea][authuserdata][SUPERUSER]!=1)
+{
+die("NOT AUTHORISED");
+}
+
+print <<<END
+<div class="infolabel">Add New Domain</div>
+<div class="subtabinfo">
+<form method="post" action="domainupdatea.php">
+END;
+
+$sql="SELECT DISTINCT CONCAT(userid, ' ', domainn) as useridinfo FROM domains ORDER BY userid";
+$result=gosql($sql,0);
+
+$userid[get_next_userid()]=get_next_userid() . ' (This is the next free userid)';
+
+while ($list=mysql_fetch_assoc($result))
+	{
+	$temp=explode(" ", $list[useridinfo]);
+	$userid[$temp[0]]=$list[useridinfo];
+	}
+
+$sql="SELECT D_ID,domainn FROM domains";
+$re2=gosql($sql,0);
+
+
+while ($res2=mysql_fetch_assoc($re2))
+{
+//print_r($res2);
+$d=$res2[D_ID];
+$lookup3[$d]=$res2[domainn];
+}
+$lookup3[0]="none (use for new subdomains being full sites)";
+asort($lookup3);
+$lookup=array("0"=>"No","1"=>"Yes");
+$lookup2=array("1"=>"Yes", "0"=>"No");
+$row=array("","domainn"=>"","userid"=>"","username"=>"","description"=>"","password1"=>"","password2"=>"","","pridomain"=>"0","deactivated"=>"","","type"=>"master","nodns"=>"","nocreateconfigs"=>"","nowwwconfig"=>"","noftpconfig"=>"","nomaillistconfig"=>"","nosqlconfig"=>"");
+$desc=array("","Domain Name","User ID","Username","Description","Password 1","Password 2","","Primary Domain","Deactivated","","Type","No DNS","No Create Configs","No WWW Config","No FTP Config","No Mailing List Config","No SQL Config");
+$function=array(array(1),array(0),array(2,$userid),array(0),array(0),array(0),array(0),array(1),array(2,$lookup3),array(2,$lookup),array(1),array(0),array(2,$lookup),array(2,$lookup),array(2,$lookup),array(2,$lookup),array(2,$lookup2),array(2,$lookup2));
+edittable("add",0,"usual",$row,$desc,$function);
+
+print "<br><br><br></div>";
+print "<div class=\"bbuttontab\"><table class=\"backbutton\" width=111><tr><td>";
+print "<a href=\"domain.php\">Back</a></td></tr></table></div>";
+
+bottom();
+?>

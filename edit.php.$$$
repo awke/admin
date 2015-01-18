@@ -1,0 +1,54 @@
+<?php
+
+include('../functions.inc');
+sqlconn();
+
+//disparray($_SESSION,session);
+//disparray($_POST,POST);
+$customerid=$_SESSION[secdata][customers][index.php][cid][$_GET[id]];
+if($customerid=="")
+{
+$customerid=$_SESSION[secdata][customers][edit.php][custid];
+}//print $customerid;
+
+
+
+
+
+
+print <<<END
+
+<h2>Editing Customer</h2>
+<h3>Customer Infomation</h3>
+<form method="post" action="update.php">
+
+END;
+
+
+$sql="SELECT * from customers WHERE idcustomers='$customerid'";
+
+
+$result=gosql($sql,0);
+$row=mysql_fetch_assoc($result);
+
+$desc=array("","First Name","Last Name","Address Header","House Name/Number","Street","Town","County","Postcode");
+$function=array(array(1),array(0),array(0),array(0),array(0),array(0),array(0),array(0),array(0));
+edittable("cust",0,"usual",$row,$desc,$function);
+
+
+$_SESSION[secdata][customers][edit.php][custid]=$customerid;
+unset($_SESSION[secdata][customers][index.php][cid]);
+
+
+//phpinfo();
+print "<h3>Telephone</h3>\n";
+$sql="SELECT * from custtel WHERE idcustomers=$customerid";
+$result=gosql($sql);
+
+bottom();
+
+//disparray($_SESSION);
+
+
+
+

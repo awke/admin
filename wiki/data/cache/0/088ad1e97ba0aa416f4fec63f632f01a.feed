@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://secure.awke.co.uk/admin/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://secure.awke.co.uk/admin/wiki/feed.php">
+        <title>AWKE Admin</title>
+        <description></description>
+        <link>https://secure.awke.co.uk/admin/wiki/</link>
+        <image rdf:resource="https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico" />
+       <dc:date>2010-09-28T13:53:22+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=redirecting_domains&amp;rev=1279043355&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=useful_information&amp;rev=1279043288&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=login_details_to_admin_panels&amp;rev=1270294986&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_remote_backup_services&amp;rev=1266525090&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_xens&amp;rev=1266524871&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=start&amp;rev=1266523246&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=extending_disc_space&amp;rev=1266143584&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=secondary_dns&amp;rev=1266143526&amp;do=diff"/>
+                <rdf:li rdf:resource="https://secure.awke.co.uk/admin/wiki/doku.php?id=2010&amp;rev=1263767505&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico">
+        <title>AWKE Admin</title>
+        <link>https://secure.awke.co.uk/admin/wiki/</link>
+        <url>https://secure.awke.co.uk/admin/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=redirecting_domains&amp;rev=1279043355&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-13T18:49:15+01:00</dc:date>
+        <dc:creator>peter</dc:creator>
+        <title>redirecting_domains - created</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=redirecting_domains&amp;rev=1279043355&amp;do=diff</link>
+        <description>&lt;URL: &lt;https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57&gt; &gt;
+
+On 09/07/2010 16:07, Ryan Ramstad via RT wrote:
+
+	&quot; &gt; 
+ &gt; Fri Jul 09 16:07:25 2010: Request 57 was acted upon.
+ &gt;  Transaction: Ticket created by phaedrus_25_@hotmail.com
+ &gt;        Queue: General
+ &gt;      Subject: Knighthawk Deliveries
+ &gt;        Owner: Nobody
+ &gt;   Requestors: phaedrus_25_@hotmail.com
+ &gt;       Status: new
+ &gt;  Ticket &lt;URL: &lt;https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=57&gt; &gt;
+ &gt; 
+ &gt; 
+ &gt; 
+ &gt; Good day, we've…</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=useful_information&amp;rev=1279043288&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-13T18:48:08+01:00</dc:date>
+        <dc:creator>peter</dc:creator>
+        <title>useful_information</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=useful_information&amp;rev=1279043288&amp;do=diff</link>
+        <description>This page is about providing helpful information.
+
+
+	*  Extending Disc Space
+	*  Looking At Logs
+	*  Mailing Lists
+	*  Email Templates
+	*  Secondary DNS
+	*  Redirecting Domains</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=login_details_to_admin_panels&amp;rev=1270294986&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-03T12:43:06+01:00</dc:date>
+        <dc:creator>ben</dc:creator>
+        <title>login_details_to_admin_panels - new hosting provider</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=login_details_to_admin_panels&amp;rev=1270294986&amp;do=diff</link>
+        <description>Thetaserver
+
+
+Jump
+
+ssh interface
+
+ssh to vps-tfm4.jump.net.uk
+
+username awketheta
+
+port 22
+
+usual backup admin password
+
+This allows shutdown, startup of vps, console, and using uptime can get the dom0 load average.
+
+often left in top mode, so you can see total of data transferred &amp; disk ops since boot</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_remote_backup_services&amp;rev=1266525090&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T20:31:30+01:00</dc:date>
+        <dc:creator>simon</dc:creator>
+        <title>list_of_remote_backup_services</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_remote_backup_services&amp;rev=1266525090&amp;do=diff</link>
+        <description>List of Remote Backup Services
+
+
+
+SplitServ
+
+
+50GB 
+$3.95 a month 
+$47.40 a year
+
+supports xattrs
+and self compiled rsync 3.0.7
+
+Looks good and supports crontab support etc for rsnapshot.
+
+SSH IP: 207.210.108.130
+
+SSH User: satack (trying to get it changed)</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_xens&amp;rev=1266524871&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T20:27:51+01:00</dc:date>
+        <dc:creator>simon</dc:creator>
+        <title>list_of_xens</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=list_of_xens&amp;rev=1266524871&amp;do=diff</link>
+        <description>CURRENT
+
+ETASERVER
+
+XenVZ
+
+Giga VPS: 20gb space, 768mb RAM, 1536mb Swap Xen, 150gb data transfer @
+£23.94 GBP per 6 month(s) 2 64bit cpus
+
+THIS IS A RATHER AMAZING OFFER.  This machine is theoretically capable
+of replacing the bitfolk vps for about 10% of the bill! but doesnt
+include backup MX &amp; DNS etc.  Very slightly less diskspace than we were
+actively using on bitfolk.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=start&amp;rev=1266523246&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T20:00:46+01:00</dc:date>
+        <dc:creator>simon</dc:creator>
+        <title>start</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=start&amp;rev=1266523246&amp;do=diff</link>
+        <description>ToDo List
+
+AWKE AGM
+
+Customer Loyalty System
+
+Client Email Setup
+
+Useful Information
+
+Setting up New User Accounts
+
+Plans for New Invoice System
+
+List of XENs
+
+List of Remote Backup Services
+
+Login details to admin panels</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=extending_disc_space&amp;rev=1266143584&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-14T10:33:04+01:00</dc:date>
+        <dc:creator>simon</dc:creator>
+        <title>extending_disc_space</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=extending_disc_space&amp;rev=1266143584&amp;do=diff</link>
+        <description>To extend a user's disk space:
+
+
+	*  Login to the server
+	*  Run this command (what are they?)
+	*  lvextend -L+100M /dev/storage/madcrnp (where the last part is the domain username and the number is the amount please use amounts of 100M)
+
+NEW:
+
+	*  resize2fs /dev/storage/madcrnp (where last part is the domain username)</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=secondary_dns&amp;rev=1266143526&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-14T10:32:06+01:00</dc:date>
+        <dc:creator>simon</dc:creator>
+        <title>secondary_dns</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=secondary_dns&amp;rev=1266143526&amp;do=diff</link>
+        <description>We now use our own.
+
+The DNS servers are 
+
+ns.awke.co.uk
+ns1.awke.co.uk
+ns2.awke.co.uk
+
+You do not need to do anything to get these to run.  If you add in on the main server that you want dns and set type to master then it will automatically distribute the list of domains to the two backups who will pull the dns files from the master.</description>
+    </item>
+    <item rdf:about="https://secure.awke.co.uk/admin/wiki/doku.php?id=2010&amp;rev=1263767505&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-17T22:31:45+01:00</dc:date>
+        <dc:creator>simon</dc:creator>
+        <title>2010</title>
+        <link>https://secure.awke.co.uk/admin/wiki/doku.php?id=2010&amp;rev=1263767505&amp;do=diff</link>
+        <description>Meeting took place on Sunday 17th January 2010 @ 19.36
+
+1. NEW SERVERS
+
+
+We have three new servers, plus backup space. These will replace the Bitfolk server in due course. Backup server isn't currently working correctly, there are issues relating to the configuaration.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,44 @@
+<?php
+$HEADER=1;
+include('functions.inc');
+
+sqlconn();
+
+
+
+print "<h1><b>$_SESSION[idauthusers]</b> -- $_SESSION[authuserdescription]</h1>";
+// print some helpful text here eg what this is for etc
+
+
+
+
+//$_INFO is array that contains info
+//$_INFO[D_ID] is the domain ID
+//$_INFO[idprividev] should be the uniq id for this page from db table 
+
+
+disparray($_SESSION,_SESSION);
+disparray($_POST,_GET);
+disparray($_INFO,_INFO);
+
+// assume privilage is OK to get here.
+
+
+$keys=array("","Go");
+unset($datadisp);
+$datadisp[]=array("Last 12 Months Full","<a href=\"anweblogfull.php/\">Go</a>");
+$datadisp[]=array("Any month","<a href=\"anweblogany.php/\">Go</a>");
+
+$function=array(array("",""));
+$uniq=array("1");
+$rt1=disptable($keys,$datadisp,$uniq,$function,"usual",1);
+print "<br><br><br>" . $rt1;
+
+
+
+
+
+
+print "<a href=\"main.php\">Main</a><br>"; 
+print "<a href=\"logout.php\">Logout</a>"; 
+?>

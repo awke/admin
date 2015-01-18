@@ -1,0 +1,48 @@
+
+Warning: include(lang-en.inc): failed to open stream: No such file or directory in /Supported/domains/awke.co.uk/secure/wwwroot/admin/sc/clam.php on line 7
+
+Warning: include(): Failed opening 'lang-en.inc' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /Supported/domains/awke.co.uk/secure/wwwroot/admin/sc/clam.php on line 7
+linux<html>
+	 <head>
+	 <meta http-equiv=Expires content=Tue, 20 Aug 1996 14:25:27 GMT>
+	 <meta http-equiv=Expire content=now>
+	 <meta http-equiv=Pragma content=no-cache>
+	 <meta http-equiv=Cache-control content=no-cache>
+	 <meta http-equiv=Content-Type content=text/html; charset=windows-1250>
+	 <STYLE TYPE=text/css>
+	 <!--
+	 TD{font-family: Arial; font-size: 9pt;}
+	 body{font-family: Arial; font-size: 10pt; }
+	 --->
+	 </STYLE>
+	 </head>
+	 <body>
+	   <center><h3>TOP 10 -  </h3><br><br>
+	     <table border=1 cellpadding=2 cellspacing=0>
+	         <tbody>
+		       <tr>
+		               <td><strong></strong></td>
+			               <td><strong>Status</strong></td>
+				               <td><strong></strong></td>
+					               <td><strong></strong></td>
+						               <td><strong><center></center></strong></td>
+							               <td><strong></strong></td>
+								               <td><strong>Prva infekcia</strong></td>
+									             </tr>
+										         </tbody>
+																		         <tr>
+																			         <td><center>></center></td>
+																				         <td><center>></center></td>
+																					         <td><a href=clamdstat.php?sort=Unique></a></td>
+																						         <td><P align=right>26 x</strong></td>
+																							         <td><P align=right>19.82 %</td>
+																								         <td><P align=right><</td>
+																									         <td><P align=right><</td>
+																										       </tr>
+																										         </table>
+																											   <div style=text-align: center;><br>
+																											   <BR> <a href=clamdstat.php?sort=All><a>:131  <a href=clamdstat.php?sort=Unique></a> 30  <a href=clamdstat.php?sort=Year></a>131  <a href=clamdstat.php?sort=Month></a>131  <a href=clamdstat.php?sort=Week></a>78 <a href=clamdstat.php?sort=Today></a>0<br><br>DB Aktualizovana:29. December 2008 18:42:36. Vzoriek:41382, daily: <br>Posledny zachyteny virus: Email.Hdr.Sanesecurity.07111007.UNOFFICIAL dna:28 Dec 2008 05:30:48<br>ClamAV version:0.94.2 Warning:none <br>Prehlad za obdobie: Report vygenerovany dna:29. Dec 2008 19:36:15.<br><br>
+																											   <center><a href=http://sourceforge.net/projects/clamdstat>ClamAV - php Log Analyzer</a> ver. 0.6 by HammerJoe
+																											   </body>
+																											   </html>
+

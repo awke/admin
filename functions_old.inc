@@ -1,0 +1,643 @@
+<?php
+
+session_name("AWKE-user-set-SESS-ID");
+
+session_set_cookie_params ( 600);
+
+session_start();
+
+session_set_cookie_params ( 600);
+
+global $_INFO;
+
+$_INFO[D_ID]=$_SESSION[INFO][D_ID];
+$_INFO[idprivdev]=$_SESSION[INFO][idprivdev];
+
+function disparray($arr,$exp="")
+{
+$t=$$arr;
+
+//print "#$t<br>";
+print "<b>$exp</b>::&nbsp;<pre>";
+print_r($arr);
+print "</pre>";
+//foreach ($arr as $key => $value) {
+  //  echo "Key: $key; Value: $value<br>\n";
+//}
+}
+
+
+function errordisp()
+{
+if(isset($_SESSION[error]))
+{
+foreach($_SESSION[error] as $value)
+{
+print "<br><font color=\"#FF0000\">";
+print "<font size=\"+2\">ERROR</font>";
+print $value ."\n";
+print "</font>";
+}
+unset($_SESSION[error]);
+}
+}
+
+
+function disptable($descheaders,$data,$datauniq,$functions,$tableclass="",$uniqdata=0)
+{
+$ret="";
+//disparray($datauniq,datauniq);
+
+$tablestyle="border=1";
+//$descheaders is an array of headers
+//$functions is an array of functions, 
+if(isset($tableclass))
+{
+$tableclassop="class=\"$tableclass\"";
+}
+$ret=$ret. sprintf ("<table $tablestyle $tableclassop>\n");
+if($descheaders[0]!="")
+{
+$ret=$ret. sprintf ("<tr>\n");
+foreach ($descheaders as $header)
+{
+$ret=$ret. sprintf ("<th><div align=\"center\">$header</div></th>");
+}
+foreach ($functions as $header)
+{
+$head=$header[0];
+$ret=$ret. sprintf ("<th><div align=\"center\">$head</div></th>");
+}
+}
+$ret=$ret. sprintf ("</tr>\n");
+$rowloc=0;
+foreach ($data as $row)
+{
+//these are the rows
+if(isset($tableclass))
+{
+$tditem="class=\"$tableclass--item\"";
+$tdfunc="class=\"$tableclass--function\"";
+if($rowloc%2==0)
+{
+$rowclass="$tableclass---even";
+}
+else
+{
+$rowclass="$tableclass---odd";
+}
+$classop="class=\"$rowclass\"";
+}                             
+//                           MAKE THE ROWS ALTERNATE CLASSES IF the tableclass is set
+$ret=$ret. sprintf ("<tr $classop>\n");
+foreach ($row as $item)
+{
+if($uniqdata==1)
+{
+$item=str_replace("%UNIQ%", $datauniq[$rowloc], $item);
+} 
+$item=str_replace("%TABCLASS%", $tableclass, $item);
+
+$ret=$ret. sprintf ("<td $tditem>$item</td>\n");   //print standard item
+}
+foreach ($functions as $function)
+{
+$op=str_replace("%UNIQ%", $datauniq[$rowloc], $function[1]);  //replace %UNIQ% with data from datauniq array
+$ret=$ret. sprintf ("<td $tdfunc>$op</div></td>");
+}
+$ret=$ret. sprintf ("</tr>\n");
+$rowloc++;
+}
+$ret=$ret. sprintf ("</tr>");
+$ret=$ret. sprintf ("</table>");
+
+return $ret;
+}
+
+
+
+
+
+
+
+
+global $db;
+
+function sqlconn()
+{
+global $db;
+$dbhost = "localhost";
+
+$dbname = "adminInfo";
+
+$dbuser = "awkeadminsoft";
+
+$dbpasswd = "y3ipRLp";
+
+global $db;
+         if(!$db = mysql_connect("$dbserver", "$dbuser", "$dbpasswd"))
+           die("<font color=\"#FF0000\">Error, I could not connect to the database at $dbserver. Using username $dbuser and password $dbpass1.<BR>Please go back and try again.");
+
+$db_selected = mysql_select_db("$dbname", $db);
+if (!$db_selected) {
+   die ("Can\'t use $dbname : " . mysql_error());
+}
+
+}
+
+function gosql($sql,$verbose=0)
+{
+global $db;//,$verbose;
+//$verbose=1;
+	         if ($result=mysql_query($sql))
+	          {
+	          if($verbose) 
+	          	echo("<P>Sucessful - $sql</P>");
+	          }
+	          else
+	          {
+	          if($verbose)
+	          	echo("<P>Error creating item: " .             mysql_error() . " in <br><b> $sql</b></P>");
+	          }
+	          //$result1=mysql_fetch_assoc($result);
+	   return $result;
+
+}
+
+
+
+function head1()
+{
+$title="AWKE User control";
+print <<<END
+<HTML><HEAD>
+
+
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>$title</title>
+<link href="admin.css" rel="STYLESHEET">
+
+</head>
+
+</HEAD>
+<body >
+END;
+}
+
+function top()
+{
+print <<<END
+END;
+
+errordisp();
+}
+
+function bottom($parm="")
+{
+print <<<END
+<br>
+END;
+if($parm==1)
+print "<a href=\"../\">UP</a><br>";
+print <<<END
+<a href="index.php">Main</a><br>
+<a href="logout.php">Logout</a>
+
+END;
+}
+
+if(!isset($_SESSION[idauthusers]))
+{
+
+if($PRELOGIN==1)
+{
+//print "PRELOGIN";
+}
+else
+{
+//header("\nLocation: login.php\n\r");
+//header("Location: login.php");
+header("Location: login.php");
+print "<a href=\"login.php\">click here to login to main.php</a>";
+}
+
+}
+
+
+function doheaders()
+{
+head1();
+top();
+}
+
+
+if(!isset($HEADER))
+{
+doheaders();
+}
+//print "klkl" . $HEADER ."RFD";
+
+
+if(!($HEADER==0))
+{
+doheaders();
+}
+
+function fix($test)
+{
+$escaped=mysql_escape_string($test);
+$trimmed=trim($escaped);
+return $trimmed;
+}
+
+function fixpost()
+{
+foreach ($_POST as $key => $value)
+{
+$_POST[$key]=fix($value);
+}
+}
+
+function fixget()
+{
+foreach ($_GET as $key => $value)
+{
+$_GET[$key]=fix($value);
+}
+}
+
+
+function lookupswitch($var) //switches key/value pairs to value/key pair [inverse lookup]
+{
+	foreach ($var as $key => $value)
+	{
+		$ret[$value]=$key;
+	}
+	return $ret;
+}
+
+
+
+function checkpostupdates($pre,$val,$row)
+{
+//disparray($row,cehckpostupdates);
+foreach($row as $key => $value)
+{
+//print "<br>_SESSION[reterrors][$pre][$val][values][$key]<br>";
+if(isset($_SESSION[reterrors][$pre][$val][values][$key]))
+{
+//print "@1@";
+$row[$key]=$_SESSION[reterrors][$pre][$val][values][$key];
+}
+}
+unset($_SESSION[reterrors][$pre][$val]);
+
+//disparray($row,checkpostupdates);
+return $row;
+}
+
+
+function edittable($pre,$val,$tableclass,$data,$desc="",$functions="")
+{
+$data=checkpostupdates($pre,$val,$data);
+unset($_SESSION[reterrors][$pre][$val][values]);
+
+	if(strcmp($tableclass,"")!=1)
+	{
+		$tableclassop="class=\"$tableclass\"";
+	}
+	$tablestyle="border=1";
+	print <<<END
+	<table $tablestyle $tableclassop>
+	<tr><th>Field</th><th>Value</th></tr>
+END;
+	$keyv=0;
+	foreach($data as $key => $value)
+	{
+
+		if($functions[$keyv][0]==1)
+		{
+		}
+		else
+		{
+			print "<tr>";
+			if($desc!="")
+			{
+				print "<td>$desc[$keyv]</td>";
+			}
+			else
+			{
+				print "<td>$key</td>";
+			}
+			if($functions[$keyv][0]==0)
+			{
+				print <<<END
+				<td><input type="text" name="edittable[$pre][$val][$key]" value="$value"></td></tr>
+END;
+			}
+			elseif($functions[$keyv][0]==2)
+			{
+
+				//this uses $function[$keyv][1] as a lookup array
+				$lookup=$functions[$keyv][1];
+
+				print <<<END
+				<td><select name="edittable[$pre][$val][$key]">
+END;
+				foreach($lookup as $key1 =>$value1)
+				{
+					$selected="";
+					if(strcmp($value,$key1)==0)
+					$selected="SELECTED";
+					print <<<END
+					<option value="$key1" $selected>$value1</option>
+END;
+				}
+				print <<<END
+				</select></td></tr>
+END;
+
+			}
+		}
+		$keyv++;
+	}
+	print <<<END
+	<tr><td></td><td><input type="submit" name="submit[edittable][$pre][$val]" value="Submit"></td></tr>
+	</table>
+END;
+
+	$_SESSION[edittable][$pre][$val][funct]=$functions;
+	
+}
+
+function retedittable($pre,$val)
+{
+	$function=$_SESSION[edittable][$pre][$val][funct];
+//disparray($function,"[edittable][$pre][$val][funct]");
+	if(!isset($_POST[submit][edittable][$pre][$val]))
+	{
+		return array(0);
+	}
+
+	$dataset=fix($_POST[edittable][$pre][$val]);
+	$funcv=0;
+
+	foreach($function as $key =>$value)
+	{
+		if($value[0]!=1)
+		{
+			$function2[$funcv]=$value;
+			$funcv++;
+		}
+	}
+//disparray($function,"FUNCTION");
+//disparray($function2,"FUNCTION2");
+	$function=$function2;
+$keyv=0;
+	foreach($_POST[edittable][$pre][$val] as $key =>$value)
+	{
+
+//disparray($value,"key:$key");
+		if($function[$keyv][0]==0)
+		{
+			$ret[$key]=$value;
+		}
+		elseif($function[$keyv][0]==2)
+		{
+//disparray($function,func);
+//			$lookup=lookupswitch($function[$keyv][1]);
+//disparray($lookup,lookup);
+//			$key1=$_POST[edittable][$pre][$val][$key];
+//disparray($key1,"[edittable][$pre][$val][$key]");
+//			$ret[$key]=$lookup[$key1];	
+			$ret[$key]=$value;
+
+		}
+		$keyv++;
+	}	
+
+unset($_SESSION[edittable][$pre][$val][funct]);
+$_SESSION[reterrors][$pre][$val][values]=$ret;
+	return array(1,$ret);
+}
+
+
+
+function clredittable($pre,$val)
+{
+unset($_SESSION[reterrors][$pre][$val]);
+}
+
+
+function datecalc($di,$da)
+{
+if($da<0)
+{
+//echo "<br>sub<br>";
+$do=datesub($di,abs($da));
+}
+else
+{
+//echo "<br>add<br>";
+$do=dateadd($di,$da);
+}
+return $do;
+}
+
+
+function dateadd($di,$da)
+{
+$d=$di[0];
+$m=$di[1];
+$y=$di[2];
+$daysofmonth = array (31,28,31,30,31,30,31,31,30,31,30,31);
+if (floor($y%4)==0)
+{
+$daysofmonth[1]=29;
+}
+
+//echo "$d-$m-$y+$da<br>";
+$d=$d+$da;
+//echo "$daysofmonth[$m]<br>";
+for($i=0;$i<9;$i++)
+{
+if ($d>$daysofmonth[$m-1])
+{
+
+$d=$d-$daysofmonth[$m-1];
+$m++;
+if($m>12)
+{
+$m=1;
+$y++;
+}
+}
+}
+return (array ($d,$m,$y));
+}
+
+
+function datecomp($di1, $di2,$type)
+{
+$d1=$di1[0];
+$m1=$di1[1];
+$y1=$di1[2];
+
+$d2=$di2[0];
+$m2=$di2[1];
+$y2=$di2[2];
+
+if($d1==$d2)
+{
+if($m1==$m2)
+{
+if($y1==$y2)
+{
+return 0;
+}
+}
+} //end exact
+
+if($y1>$y2)
+return 1; // y1 bigger
+if($y1<$y2)
+return -1; //y1 smaller
+
+//same year
+
+if($m1>$m2)
+return 1; // m1 bigger
+if($m1<$m2)
+return -1; //m1 smaller
+
+// same month
+
+if($type==0)
+{
+return; //return if month only comparison
+}
+elseif($type==1) // day match
+{
+if($d1>$d2)
+return 1; // d1 bigger
+if($d1<$d2)
+return -1; // d1 smaller
+return "ERROR";
+}
+
+}
+
+function datesub($di,$da)
+{
+$d=$di[0];
+$m=$di[1];
+$y=$di[2];$daysofmonth = array (31,28,31,30,31,30,31,31,30,31,30,31);
+if (floor($y%4)==0)
+{
+$daysofmonth[1]=29;
+}
+//echo "$d-$m-$y-$da<br>";
+$d1=$d-$da;
+for($i=0;$i<9;$i++)
+{
+        if($d1==0)
+                {
+        //      echo "\xa3\xa3\xa3";
+                $m--;
+                        if($m<1)
+                        {
+                                $m=12;
+                                $y--;
+                        }
+                $d1=$daysofmonth[$m-1];
+
+                }
+        if ($d1<1)
+                {
+//echo "<br>GGa$d1@$d:$m:$y<br>";
+                $m--;
+                        if($m<1)
+                        {
+                                $m=12;
+                                $y--;
+                        }
+                $d1=$daysofmonth[$m-1]-abs($d1);
+                }
+}
+$d=$d1;
+return (array ($d,$m,$y));
+}
+
+function getcurdate()
+{
+$CYR = date( "Y", time() );
+$CMN = date( "m", time() );
+$CYD = date( "d", time() );
+$ret=array($CYD,$CMN,$CYR);
+return $ret;
+}
+
+function weekbeg($INPUTDATE)
+{
+global $remoff2;
+$test = weekday ($INPUTDATE);
+$de = $remoff2[$test];
+$weekbeg=datecalc($INPUTDATE,$de);
+return $weekbeg;
+}
+
+
+function dispdate($INPUTDATE)
+{
+return date('j F Y',mktime(0,0,0,$INPUTDATE[1],$INPUTDATE[0],$INPUTDATE[2]));
+//return "$INPUTDATE[2]-$INPUTDATE[1]-$INPUTDATE[0]";
+}
+
+function dispdate1($INPUTDATE)
+{
+return mktime(0,0,0,$INPUTDATE[1],$INPUTDATE[0],$INPUTDATE[2]);
+//return "$INPUTDATE[2]-$INPUTDATE[1]-$INPUTDATE[0]";
+}
+function dispdate2($INPUTDATE)
+{
+//return mktime(0,0,0,$INPUTDATE[1],$INPUTDATE[0],$INPUTDATE[2]);
+return "$INPUTDATE[2]-$INPUTDATE[1]-$INPUTDATE[0]";
+}
+
+function sqldate($INPUTDATE)
+{
+$dates=split("-",$INPUTDATE);
+return array($dates[2],$dates[1],$dates[0]);
+}
+
+
+
+
+function monthadd($di,$m)
+{
+$d=$di[0];
+$m=$di[1];
+$y=$di[2];
+$m+$m;
+if($m>12)
+$y++;
+return array($d,$m,$y);
+}
+
+
+$RETURNURL=$_SERVER["HTTP_REFERER"];
+
+
+
+function passgen()
+{ 
+//$return=exec("/usr/bin/apg -n1 -a0 -d -MNCLR",$t,$i);
+//disparray($t,t);
+//disparray($i,i);
+//disparray($return,retikurn);
+//echo exec('/usr/local/bin/sapassgen');// -n1 -a0 -d -MNCLR');
+return exec('/usr/bin/apg -n1 -a0 -d -MNCL');
+//return $t[0];
+}
+

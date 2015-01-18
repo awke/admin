@@ -1,0 +1,33 @@
+====== HOW TO REDIRECT APACHE FROM DOMAIN TO WWW.DOMAIN ======
+
+
+===== Code needed in apachextraconf =====
+
+
+ServerAlias bartrams.net
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^bartrams\.net
+
+RewriteRule ^(.*)$ http://www.bartrams.net/$1 [R=permanent,L]
+
+
+
+
+
+First line lets server answer for bartrams.net
+the next lines rewrite bartrams.net/<JUNK> to www.bartrams.net/<JUNK>
+
+I honestly not sure they wanted the last part I recon they probably were only interested in the first part.
+
+(see ticket number 95) 
+[URL: https://secure.awke.co.uk/rt/rt/Ticket/Display.html?id=95]
+
+
+===== add in dns entries =====
+
+
+madcornishprojectionist.co.uk. 		A 		212.13.216.213 	No
+
+**NOTE THE DOT AFTER THE DOMAIN NAME ITS VITALLY IMPORTANT**
