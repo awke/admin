@@ -15,12 +15,6 @@ unset($_SESSION[webhostname]);
 
 $sql="SELECT userpriv.D_ID as domainid,iduserpriv,domains.description as domsdesc, domainn,deactivated FROM userpriv LEFT JOIN domains ON domains.D_ID = userpriv.D_ID WHERE  idauthusers='$_SESSION[idauthusers]' GROUP BY domainn ORDER BY domainn";
 
-
-
-
-
-//$sql="SELECT userpriv.D_ID as domainid,privdev_idprivdev,iduserpriv,privdev.description as privdevdesc,type_2,webpage,webpageop,domains.description as domsdesc, domainn,deactivated from userpriv,domains,privdev WHERE domains.D_ID=userpriv.D_ID AND privdev.idprivdev=privdev_idprivdev AND idauthusers='$_SESSION[idauthusers]' ORDER BY domainn,privdevdesc";
-
 $results=gosql($sql,0);
 
 $num_rows = mysql_num_rows($results);
@@ -43,7 +37,7 @@ $loc=0;
 $row=mysql_fetch_assoc($results);
 if($row[domainid]==0)
 {
-$sql="SELECT D_ID as domainid,domainn,deactivated,description as domaindesc FROM domains WHERE D_ID!=-20 ORDER BY deactivated,domainn";
+$sql="SELECT D_ID as domainid,domainn,deactivated,description as domaindesc FROM domains WHERE D_ID!=-20 and deactivated=0 ORDER BY deactivated,domainn";
 
 $_SESSION[secarea][authuserdata][SUPERUSER]=1;
 $results=gosql($sql,0);
