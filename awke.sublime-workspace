@@ -1,0 +1,372 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"R",
+				"_REQUEST"
+			],
+			[
+				"Divis",
+				"divisionID"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "dnsupdatea.php",
+			"settings":
+			{
+				"buffer_size": 999,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "the",
+		"selected_items":
+		[
+			[
+				"the",
+				"Themr: List themes"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ht",
+				"HTMLPrettify"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"htm",
+				"HTMLPrettify"
+			],
+			[
+				"fo",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"code",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"for",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"php",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"ph",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"brow",
+				"Browser Integration: Launch Browser"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"format code",
+				"Format Code"
+			],
+			[
+				"form",
+				"Format Code"
+			],
+			[
+				"forma",
+				"Format Code"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 583.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ben/Documents/code/admin"
+	],
+	"file_history":
+	[
+		"/home/ben/Documents/code/scl/trunk/documents/rules.html",
+		"/home/ben/Documents/code/scl/trunk/meetingandpayment.php",
+		"/home/ben/Documents/code/scl/trunk/guidematchday.php",
+		"/home/ben/Documents/code/scl/trunk/honourslast.php",
+		"/home/ben/Documents/code/scl/trunk/otherstats.php",
+		"/home/ben/Documents/code/scl/trunk/Includes/Header.htm",
+		"/home/ben/Documents/code/scl/trunk/2014tables.php",
+		"/home/ben/Documents/code/scl/trunk/index.php",
+		"/home/ben/Documents/code/scl/trunk/Includes/sponsor.htm",
+		"/home/ben/Documents/code/scl/trunk/contcommittee.php",
+		"/home/ben/Desktop/History-Records-Other Stats.html",
+		"/home/ben/Desktop/League Information-Meetings & Payments-1.html",
+		"/home/ben/Desktop/League Information-Guidance-Match Day.html",
+		"/home/ben/Desktop/History-Last Season-Honours.html",
+		"/home/ben/Desktop/History-Last Season-Tables.html",
+		"/home/ben/Desktop/History-Membership.html",
+		"/home/ben/Documents/code/scl/trunk/membership.php",
+		"/home/ben/Desktop/History-Records-Divn Winners.html",
+		"/home/ben/Documents/code/scl/trunk/recordswinners.php",
+		"/home/ben/Documents/code/scl/trunk/otherstats.htm",
+		"/home/ben/30 Div Stats 2013.html",
+		"/home/ben/.config/sublime-text-3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/home/ben/Documents/code/scl/trunk/table.php",
+		"/home/ben/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/home/ben/Documents/code/scl/trunk/Scripts/devtip-dependentlistboxes-sample-jpsutilityabbr-WithComment.js",
+		"/home/ben/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"//home/ben/Documents/code/scl/trunk/index.php",
+		"/home/ben/.config/sublime-text-3/Packages/BrowserIntegration/BrowserIntegration.sublime-settings",
+		"/home/ben/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/ben/Documents/code/scl/trunk/honoursprem.php",
+		"/home/ben/SCLWeb/Includes/Reports.php",
+		"/home/ben/SCLWeb/guidegrounds.php",
+		"/home/ben/League Information-Guidance-Grounds-apr25.html",
+		"/tmp/League Information-Guidance-Grounds-apr25.doc",
+		"/home/ben/.fluxbox/startup",
+		"/home/ben/SCLWeb/recordscup.htm",
+		"/home/ben/History-Records-Other Stats.html",
+		"/home/ben/SCLWeb/recordscup.php",
+		"/home/ben/SCLWeb/otherstats.php",
+		"/home/ben/SCLWeb/Includes/Header.htm",
+		"/home/ben/History-Records-Cup Winners.html",
+		"/home/ben/SCLWeb/Includes/sponsor.htm",
+		"/home/ben/SCLWeb/honourslast.php",
+		"/home/ben/SCLWeb/guidediscipline.php",
+		"/home/ben/League-Info-Guidance-Discipline-apr1.html",
+		"/home/ben/SCLWeb/scl.css",
+		"/home/ben/SCLWeb/membership.php",
+		"/home/ben/SCLWeb/index.php",
+		"/home/ben/History-Membership-apr2-1.html",
+		"/home/ben/History-Last Season-Honours.html",
+		"/home/ben/History-Last Season-Tables.html",
+		"/home/ben/SCLWeb/2013tables.php",
+		"/home/ben/SCLWeb/contcommittee.php",
+		"/home/ben/SCLWeb/contmemberclubs.php",
+		"/home/ben/SCLWeb/contumpires.php",
+		"/home/ben/SCLWeb/guideecbinfo.php",
+		"/home/ben/SCLWeb/guidematchday.php",
+		"/home/ben/SCLWeb/infoplaycond.php",
+		"/home/ben/SCLWeb/inforules.php",
+		"/home/ben/SCLWeb/logon.php",
+		"/home/ben/SCLWeb/marksa.php",
+		"/home/ben/SCLWeb/marksh.php",
+		"/home/ben/SCLWeb/meetingandpayment.php",
+		"/home/ben/SCLWeb/reports.php",
+		"/home/ben/SCLWeb/reportsmaster.php",
+		"/home/ben/SCLWeb/table.php",
+		"/home/ben/SCLWeb/Includes/bottom.htm",
+		"/home/ben/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/ben/SCLWeb/History.php",
+		"/home/ben/SCLWeb/documents/playcond.html",
+		"/home/ben/46 63 Rules - Playing Conditions.html",
+		"/home/ben/SCLWeb/documents/rules.html",
+		"/home/ben/SCLWeb/SCL_Web.sublime-project",
+		"/tmp/sms-20131125125612-1.xml"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"STYLE",
+			"Â£",
+			"the"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"£"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "dnsupdatea.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 999,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "awke.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 319.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
